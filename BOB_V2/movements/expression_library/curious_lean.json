@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "name": "Curious lean",
+  "mode": "joints",
+  "expression": 3,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 63
+    },
+    {
+      "angles": [
+        115,
+        119,
+        115,
+        61
+      ],
+      "moveMs": 120,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 90
+    }
+  ]
+}

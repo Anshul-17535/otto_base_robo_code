@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "Curious",
+  "expression": 3,
+  "frames": [
+    {
+      "angles": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "moveMs": 1600,
+      "holdMs": 500
+    },
+    {
+      "angles": [
+        80,
+        66,
+        90,
+        44
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        80,
+        64,
+        90,
+        46
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "moveMs": 1600,
+      "holdMs": 700
+    }
+  ]
+}

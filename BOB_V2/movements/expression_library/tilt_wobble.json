@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "name": "Wobble (tilt)",
+  "mode": "tilt",
+  "expression": 3,
+  "frames": [
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 700,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        3.0,
+        3.0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        -3.0,
+        3.0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        -3.0,
+        -3.0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        3.0,
+        -3.0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 700,
+      "holdMs": 400
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "name": "Celebrate",
+  "mode": "joints",
+  "expression": 5,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        116,
+        113,
+        116,
+        113
+      ],
+      "moveMs": 120,
+      "holdMs": 9
+    },
+    {
+      "angles": [
+        74,
+        77,
+        74,
+        77
+      ],
+      "moveMs": 168,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        124,
+        90,
+        56,
+        90
+      ],
+      "moveMs": 200,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        56,
+        90,
+        124,
+        90
+      ],
+      "moveMs": 272,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        124,
+        90,
+        56,
+        90
+      ],
+      "moveMs": 272,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        56,
+        90,
+        124,
+        90
+      ],
+      "moveMs": 272,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        119,
+        119,
+        119,
+        119
+      ],
+      "moveMs": 252,
+      "holdMs": 14
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 32
+    }
+  ]
+}

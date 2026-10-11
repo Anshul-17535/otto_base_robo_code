@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "neutral": [
+    90,
+    90,
+    90,
+    90
+  ],
+  "jointOrder": [
+    "LH",
+    "LF",
+    "RH",
+    "RF"
+  ],
+  "radius": 40,
+  "amplitude": 28,
+  "tiltAmplitude": 6.0,
+  "cutoff": 15.0,
+  "physicalValidation": "not tested",
+  "purpose": "Motion Studio import + ESP32 slots; idle-tagged for later BOB_ROBO_CONVO idle selection (integration deferred)",
+  "requirements": [
+    "Saved calibrated idle pose (Save Calibrated Position / radius >= amplitude)",
+    "Fresh calibrated IMU before playing",
+    "Posture (tilt) movements require PID enabled and tuned",
+    "Supported/observed trial before trusting any movement"
+  ],
+  "movements": [
+    {
+      "file": "idle_hold.json",
+      "name": "Idle hold",
+      "mode": "joints",
+      "category": "idle",
+      "idle": true,
+      "expression": 6
+    },
+    {
+      "file": "breathe.json",
+      "name": "Breathe",
+      "mode": "joints",
+      "category": "idle",
+      "idle": true,
+      "expression": 6
+    },
+    {
+      "file": "little_nod.json",
+      "name": "Little nod",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "look_around.json",
+      "name": "Look around",
+      "mode": "joints",
+      "category": "idle",
+      "idle": true,
+      "expression": 3
+    },
+    {
+      "file": "happy_wiggle.json",
+      "name": "Happy wiggle",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "curious_lean.json",
+      "name": "Curious lean",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": true,
+      "expression": 3
+    },
+    {
+      "file": "sleepy_rock.json",
+      "name": "Sleepy rock",
+      "mode": "joints",
+      "category": "idle",
+      "idle": true,
+      "expression": 4
+    },
+    {
+      "file": "little_bow.json",
+      "name": "Little bow",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": false,
+      "expression": 5
+    },
+    {
+      "file": "shiver.json",
+      "name": "Shiver",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": false,
+      "expression": 1
+    },
+    {
+      "file": "cheer_bounce.json",
+      "name": "Cheer bounce",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": false,
+      "expression": 0
+    },
+    {
+      "file": "sync_bounce.json",
+      "name": "Bounce (sync)",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "foot_flap.json",
+      "name": "Foot flap",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "waddle.json",
+      "name": "Waddle",
+      "mode": "joints",
+      "category": "idle",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "wave4.json",
+      "name": "Leg wave",
+      "mode": "joints",
+      "category": "gesture",
+      "idle": false,
+      "expression": 5
+    },
+    {
+      "file": "tilt_nod.json",
+      "name": "Nod (tilt)",
+      "mode": "tilt",
+      "category": "gesture",
+      "idle": true,
+      "expression": 0
+    },
+    {
+      "file": "tilt_shake.json",
+      "name": "Shake (tilt)",
+      "mode": "tilt",
+      "category": "gesture",
+      "idle": true,
+      "expression": 2
+    },
+    {
+      "file": "tilt_sway.json",
+      "name": "Sway (tilt)",
+      "mode": "tilt",
+      "category": "idle",
+      "idle": true,
+      "expression": 4
+    },
+    {
+      "file": "tilt_wobble.json",
+      "name": "Wobble (tilt)",
+      "mode": "tilt",
+      "category": "idle",
+      "idle": true,
+      "expression": 3
+    },
+    {
+      "file": "tilt_bow.json",
+      "name": "Bow (tilt)",
+      "mode": "tilt",
+      "category": "gesture",
+      "idle": false,
+      "expression": 5
+    },
+    {
+      "file": "tilt_perk.json",
+      "name": "Perk up (tilt)",
+      "mode": "tilt",
+      "category": "idle",
+      "idle": true,
+      "expression": 0
+    }
+  ]
+}

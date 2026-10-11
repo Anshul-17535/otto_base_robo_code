@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "Little nod",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        31
+      ],
+      "moveMs": 1600,
+      "holdMs": 500
+    },
+    {
+      "angles": [
+        91,
+        90,
+        91,
+        31
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        89,
+        90,
+        89,
+        31
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        31
+      ],
+      "moveMs": 1600,
+      "holdMs": 700
+    }
+  ]
+}

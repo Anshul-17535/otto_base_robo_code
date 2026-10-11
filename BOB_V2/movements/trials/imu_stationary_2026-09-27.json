@@ -1,0 +1,3585 @@
+{
+  "pose": [
+    80,
+    65,
+    90,
+    45
+  ],
+  "channel": 3,
+  "delta": 1,
+  "samples": [
+    {
+      "time": 1790508601.2869031,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 15,
+        "pitch": 1.4619712829589844,
+        "roll": -0.4779510498046875,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -514,
+        "ay": 18,
+        "az": -880,
+        "gx": -40,
+        "gy": 16,
+        "gz": 21,
+        "rax": -1,
+        "ray": 7,
+        "raz": -45,
+        "rgx": -3,
+        "rgy": 1,
+        "rgz": -2,
+        "pitch": 1.3,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1019,
+        "delta": 39,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 18
+      }
+    },
+    {
+      "time": 1790508601.7388108,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 26,
+        "pitch": 0.8530921936035156,
+        "roll": -0.3494720458984375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -518,
+        "ay": 18,
+        "az": -883,
+        "gx": -40,
+        "gy": 19,
+        "gz": 27,
+        "rax": -5,
+        "ray": 7,
+        "raz": -48,
+        "rgx": -3,
+        "rgy": 4,
+        "rgz": 4,
+        "pitch": 1.2,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 39
+      }
+    },
+    {
+      "time": 1790508602.1725068,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 48,
+        "pitch": 1.4428558349609375,
+        "roll": -0.606109619140625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -514,
+        "ay": 17,
+        "az": -880,
+        "gx": -38,
+        "gy": 16,
+        "gz": 30,
+        "rax": -1,
+        "ray": 6,
+        "raz": -45,
+        "rgx": -1,
+        "rgy": 1,
+        "rgz": 7,
+        "pitch": 1.3,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1019,
+        "delta": 39,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 20
+      }
+    },
+    {
+      "time": 1790508602.541885,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 44,
+        "pitch": 1.2801532745361328,
+        "roll": -0.4821319580078125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -516,
+        "ay": 19,
+        "az": -884,
+        "gx": -39,
+        "gy": 14,
+        "gz": 21,
+        "rax": -3,
+        "ray": 8,
+        "raz": -49,
+        "rgx": -2,
+        "rgy": -1,
+        "rgz": -2,
+        "pitch": 1.3,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 46
+      }
+    },
+    {
+      "time": 1790508602.956386,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 11,
+        "pitch": 1.3526630401611328,
+        "roll": -0.4737548828125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -516,
+        "ay": 22,
+        "az": -883,
+        "gx": -40,
+        "gy": 13,
+        "gz": 23,
+        "rax": -3,
+        "ray": 11,
+        "raz": -48,
+        "rgx": -3,
+        "rgy": -2,
+        "rgz": 0,
+        "pitch": 1.3,
+        "roll": -0.7,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1022,
+        "delta": 42,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 24
+      }
+    },
+    {
+      "time": 1790508603.417869,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 4,
+        "pitch": 1.1619815826416016,
+        "roll": -0.3507232666015625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -517,
+        "ay": 17,
+        "az": -881,
+        "gx": -39,
+        "gy": 20,
+        "gz": 25,
+        "rax": -4,
+        "ray": 6,
+        "raz": -46,
+        "rgx": -2,
+        "rgy": 5,
+        "rgz": 2,
+        "pitch": 1.2,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1021,
+        "delta": 41,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 1,
+        "reconnects": 0,
+        "lastOkMs": 91
+      }
+    },
+    {
+      "time": 1790508603.888799,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 45,
+        "pitch": 1.2350482940673828,
+        "roll": -0.3432464599609375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -513,
+        "ay": 19,
+        "az": -884,
+        "gx": -39,
+        "gy": 16,
+        "gz": 24,
+        "rax": 0,
+        "ray": 8,
+        "raz": -49,
+        "rgx": -2,
+        "rgy": 1,
+        "rgz": 1,
+        "pitch": 1.4,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1022,
+        "delta": 42,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 40
+      }
+    },
+    {
+      "time": 1790508604.405639,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 48,
+        "pitch": 1.1709041595458984,
+        "roll": -0.4130859375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -515,
+        "ay": 18,
+        "az": -876,
+        "gx": -40,
+        "gy": 17,
+        "gz": 27,
+        "rax": -2,
+        "ray": 7,
+        "raz": -41,
+        "rgx": -3,
+        "rgy": 2,
+        "rgz": 4,
+        "pitch": 1.1,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1016,
+        "delta": 36,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 4
+      }
+    },
+    {
+      "time": 1790508604.8077178,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 8,
+        "pitch": 1.200399398803711,
+        "roll": -0.5413360595703125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -518,
+        "ay": 20,
+        "az": -884,
+        "gx": -38,
+        "gy": 16,
+        "gz": 24,
+        "rax": -5,
+        "ray": 9,
+        "raz": -49,
+        "rgx": -1,
+        "rgy": 1,
+        "rgz": 1,
+        "pitch": 1.2,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1024,
+        "delta": 44,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 1,
+        "reconnects": 0,
+        "lastOkMs": 64
+      }
+    },
+    {
+      "time": 1790508605.2225122,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 17,
+        "pitch": 1.2517890930175781,
+        "roll": -0.483551025390625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -516,
+        "ay": 18,
+        "az": -882,
+        "gx": -40,
+        "gy": 17,
+        "gz": 24,
+        "rax": -3,
+        "ray": 7,
+        "raz": -47,
+        "rgx": -3,
+        "rgy": 2,
+        "rgz": 1,
+        "pitch": 1.2,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1022,
+        "delta": 42,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 23
+      }
+    },
+    {
+      "time": 1790508605.6179562,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 8,
+        "pitch": 1.3643646240234375,
+        "roll": -0.4130859375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -516,
+        "ay": 18,
+        "az": -884,
+        "gx": -38,
+        "gy": 16,
+        "gz": 25,
+        "rax": -3,
+        "ray": 7,
+        "raz": -49,
+        "rgx": -1,
+        "rgy": 1,
+        "rgz": 2,
+        "pitch": 1.3,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 15
+      }
+    },
+    {
+      "time": 1790508606.043262,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 18,
+        "pitch": 1.4201087951660156,
+        "roll": -0.345733642578125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -514,
+        "ay": 17,
+        "az": -885,
+        "gx": -40,
+        "gy": 14,
+        "gz": 22,
+        "rax": -1,
+        "ray": 6,
+        "raz": -50,
+        "rgx": -3,
+        "rgy": -1,
+        "rgz": -1,
+        "pitch": 1.4,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 1,
+        "reconnects": 0,
+        "lastOkMs": 68
+      }
+    },
+    {
+      "time": 1790508606.4331908,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 28,
+        "pitch": 1.0857734680175781,
+        "roll": -0.4170684814453125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -521,
+        "ay": 0,
+        "az": 0,
+        "gx": 0,
+        "gy": 0,
+        "gz": 0,
+        "rax": -8,
+        "ray": -11,
+        "raz": 835,
+        "rgx": 37,
+        "rgy": -15,
+        "rgz": -23,
+        "pitch": -58.4,
+        "roll": -179.2,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 521,
+        "delta": 459,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 32
+      }
+    },
+    {
+      "time": 1790508606.833985,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 34,
+        "pitch": 1.1804370880126953,
+        "roll": -0.5398712158203125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -515,
+        "ay": 19,
+        "az": -881,
+        "gx": -39,
+        "gy": 16,
+        "gz": 25,
+        "rax": -2,
+        "ray": 8,
+        "raz": -46,
+        "rgx": -2,
+        "rgy": 1,
+        "rgz": 2,
+        "pitch": 1.3,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1020,
+        "delta": 40,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 37
+      }
+    },
+    {
+      "time": 1790508607.168183,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 40,
+        "pitch": 1.14201545715332,
+        "roll": -0.3494720458984375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -515,
+        "ay": 20,
+        "az": -881,
+        "gx": -37,
+        "gy": 17,
+        "gz": 25,
+        "rax": -2,
+        "ray": 9,
+        "raz": -46,
+        "rgx": 0,
+        "rgy": 2,
+        "rgz": 2,
+        "pitch": 1.3,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1020,
+        "delta": 40,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 10
+      }
+    },
+    {
+      "time": 1790508607.605809,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 14,
+        "pitch": 1.142578125,
+        "roll": -0.4144134521484375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -513,
+        "ay": 20,
+        "az": -886,
+        "gx": -39,
+        "gy": 15,
+        "gz": 24,
+        "rax": 0,
+        "ray": 9,
+        "raz": -51,
+        "rgx": -2,
+        "rgy": 0,
+        "rgz": 1,
+        "pitch": 1.5,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 13
+      }
+    },
+    {
+      "time": 1790508608.091058,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 4,
+        "pitch": 1.504873275756836,
+        "roll": -0.6757354736328125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -513,
+        "ay": 17,
+        "az": -882,
+        "gx": -39,
+        "gy": 15,
+        "gz": 33,
+        "rax": 0,
+        "ray": 6,
+        "raz": -47,
+        "rgx": -2,
+        "rgy": 0,
+        "rgz": 10,
+        "pitch": 1.4,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1020,
+        "delta": 40,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 5
+      }
+    },
+    {
+      "time": 1790508608.538801,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 12,
+        "pitch": 1.2957687377929688,
+        "roll": -0.411773681640625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -514,
+        "ay": 20,
+        "az": -882,
+        "gx": -40,
+        "gy": 21,
+        "gz": 38,
+        "rax": -1,
+        "ray": 9,
+        "raz": -47,
+        "rgx": -3,
+        "rgy": 6,
+        "rgz": 15,
+        "pitch": 1.3,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1021,
+        "delta": 41,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 14
+      }
+    },
+    {
+      "time": 1790508608.945038,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 20,
+        "pitch": 1.26060676574707,
+        "roll": -0.545745849609375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -520,
+        "ay": 17,
+        "az": -881,
+        "gx": -39,
+        "gy": 14,
+        "gz": 20,
+        "rax": -7,
+        "ray": 6,
+        "raz": -46,
+        "rgx": -2,
+        "rgy": -1,
+        "rgz": -3,
+        "pitch": 1.0,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 48
+      }
+    },
+    {
+      "time": 1790508609.322491,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 92,
+        "pitch": 1.0852088928222656,
+        "roll": -0.35198974609375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -511,
+        "ay": 16,
+        "az": -878,
+        "gx": -39,
+        "gy": 21,
+        "gz": 40,
+        "rax": 2,
+        "ray": 5,
+        "raz": -43,
+        "rgx": -2,
+        "rgy": 6,
+        "rgz": 17,
+        "pitch": 1.4,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1016,
+        "delta": 36,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 29
+      }
+    },
+    {
+      "time": 1790508609.6577961,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 31,
+        "pitch": 1.4128475189208984,
+        "roll": -0.4130859375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -516,
+        "ay": 18,
+        "az": -883,
+        "gx": -40,
+        "gy": 13,
+        "gz": 22,
+        "rax": -3,
+        "ray": 7,
+        "raz": -48,
+        "rgx": -3,
+        "rgy": -2,
+        "rgz": -1,
+        "pitch": 1.3,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1022,
+        "delta": 42,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 32
+      }
+    },
+    {
+      "time": 1790508610.075098,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 40,
+        "pitch": 1.3558502197265625,
+        "roll": -0.3507232666015625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -517,
+        "ay": 17,
+        "az": -882,
+        "gx": -40,
+        "gy": 14,
+        "gz": 19,
+        "rax": -4,
+        "ray": 6,
+        "raz": -47,
+        "rgx": -3,
+        "rgy": -1,
+        "rgz": -4,
+        "pitch": 1.2,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1022,
+        "delta": 42,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 38
+      }
+    },
+    {
+      "time": 1790508610.498275,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 33,
+        "pitch": 1.1605300903320312,
+        "roll": -0.538421630859375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -517,
+        "ay": 17,
+        "az": -884,
+        "gx": -40,
+        "gy": 16,
+        "gz": 30,
+        "rax": -4,
+        "ray": 6,
+        "raz": -49,
+        "rgx": -3,
+        "rgy": 1,
+        "rgz": 7,
+        "pitch": 1.2,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1024,
+        "delta": 44,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 39
+      }
+    },
+    {
+      "time": 1790508610.957806,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 14,
+        "pitch": 1.2474517822265625,
+        "roll": -0.411773681640625,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -512,
+        "ay": 17,
+        "az": -883,
+        "gx": -39,
+        "gy": 12,
+        "gz": 23,
+        "rax": 1,
+        "ray": 6,
+        "raz": -48,
+        "rgx": -2,
+        "rgy": -3,
+        "rgz": 0,
+        "pitch": 1.5,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1020,
+        "delta": 40,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 10
+      }
+    },
+    {
+      "time": 1790508611.368621,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 10,
+        "pitch": 1.4302921295166016,
+        "roll": -0.60150146484375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -518,
+        "ay": 21,
+        "az": -887,
+        "gx": -39,
+        "gy": 19,
+        "gz": 35,
+        "rax": -5,
+        "ray": 10,
+        "raz": -52,
+        "rgx": -2,
+        "rgy": 4,
+        "rgz": 12,
+        "pitch": 1.3,
+        "roll": -0.6,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1027,
+        "delta": 47,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 25
+      }
+    },
+    {
+      "time": 1790508611.816641,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 31,
+        "pitch": 1.2952079772949219,
+        "roll": -0.3469696044921875,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -519,
+        "ay": 18,
+        "az": -882,
+        "gx": -38,
+        "gy": 16,
+        "gz": 27,
+        "rax": -6,
+        "ray": 7,
+        "raz": -47,
+        "rgx": -1,
+        "rgy": 1,
+        "rgz": 4,
+        "pitch": 1.1,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1023,
+        "delta": 43,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 33
+      }
+    },
+    {
+      "time": 1790508612.2233,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 36,
+        "pitch": 1.0744609832763672,
+        "roll": -0.4130859375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -518,
+        "ay": 19,
+        "az": -884,
+        "gx": -39,
+        "gy": 14,
+        "gz": 20,
+        "rax": -5,
+        "ray": 8,
+        "raz": -49,
+        "rgx": -2,
+        "rgy": -1,
+        "rgz": -3,
+        "pitch": 1.2,
+        "roll": -0.5,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1024,
+        "delta": 44,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 4
+      }
+    },
+    {
+      "time": 1790508612.800797,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 7,
+        "pitch": 1.2775211334228516,
+        "roll": -0.604583740234375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -513,
+        "ay": 17,
+        "az": -883,
+        "gx": -40,
+        "gy": 19,
+        "gz": 27,
+        "rax": 0,
+        "ray": 6,
+        "raz": -48,
+        "rgx": -3,
+        "rgy": 4,
+        "rgz": 4,
+        "pitch": 1.4,
+        "roll": -0.3,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1021,
+        "delta": 41,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 11
+      }
+    },
+    {
+      "time": 1790508613.20881,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 18,
+        "pitch": 0.9830474853515625,
+        "roll": -0.8670196533203125,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -522,
+        "ay": 25,
+        "az": -883,
+        "gx": -40,
+        "gy": 0,
+        "gz": 5,
+        "rax": -9,
+        "ray": 14,
+        "raz": -48,
+        "rgx": -3,
+        "rgy": -15,
+        "rgz": -18,
+        "pitch": 1.0,
+        "roll": -0.9,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1026,
+        "delta": 46,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 1,
+        "reconnects": 0,
+        "lastOkMs": 71
+      }
+    },
+    {
+      "time": 1790508613.6206028,
+      "phase": "read_only",
+      "state": {
+        "armed": false,
+        "pid": false,
+        "playing": false,
+        "reason": "ready; arm to control",
+        "imuReady": true,
+        "calibrated": true,
+        "sampleAgeMs": 6,
+        "pitch": 1.2649269104003906,
+        "roll": -0.5355072021484375,
+        "base": [
+          90,
+          90,
+          90,
+          90
+        ],
+        "commanded": [
+          80,
+          65,
+          90,
+          45
+        ],
+        "correction": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "frame": 0,
+        "remaining": 0,
+        "limited": false,
+        "limitedFrames": 0,
+        "rmsTilt": 0,
+        "peakTilt": 0,
+        "leaseMs": 3000,
+        "config": {
+          "gains": [
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ],
+            [
+              0.3499999940395355,
+              0,
+              0.029999999329447746
+            ]
+          ],
+          "joints": [
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              1
+            ],
+            [
+              60,
+              120,
+              1,
+              0
+            ],
+            [
+              60,
+              120,
+              0,
+              -1
+            ]
+          ],
+          "correction": 8,
+          "slew": 40,
+          "cutoff": 35
+        }
+      },
+      "imu": {
+        "ax": -513,
+        "ay": 18,
+        "az": -882,
+        "gx": -39,
+        "gy": 16,
+        "gz": 25,
+        "rax": 0,
+        "ray": 7,
+        "raz": -47,
+        "rgx": -2,
+        "rgy": 1,
+        "rgz": 2,
+        "pitch": 1.4,
+        "roll": -0.4,
+        "lift": 0,
+        "ok": 1,
+        "chip": "MPU-6500",
+        "addr": 104,
+        "whoAmI": 112,
+        "calOk": 1,
+        "calAx": -513,
+        "calAy": 11,
+        "calAz": -835,
+        "restMag": 980,
+        "mag": 1020,
+        "delta": 40,
+        "thresh": 240,
+        "liftEn": 1,
+        "react": 0,
+        "fails": 0,
+        "reconnects": 0,
+        "lastOkMs": 27
+      }
+    }
+  ],
+  "completed": false,
+  "returned": false,
+  "observationComplete": true
+}

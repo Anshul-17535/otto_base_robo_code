@@ -1,0 +1,1359 @@
+{
+  "pose": [
+    80,
+    65,
+    90,
+    45
+  ],
+  "channel": 3,
+  "delta": 1,
+  "samples": [
+    {
+      "time": 1790508671.718294,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 50,
+      "pitch": 1.2316360473632812,
+      "roll": -0.4821319580078125,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508672.0257769,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 48,
+      "pitch": 1.2074394226074219,
+      "roll": -0.40911865234375,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508672.5380669,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 1.1991863250732422,
+      "roll": -0.411773681640625,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508673.8835242,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 40,
+      "pitch": 1.2952079772949219,
+      "roll": -0.3469696044921875,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508674.193622,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 43,
+      "pitch": 1.4907054901123047,
+      "roll": -0.5413360595703125,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508674.499733,
+      "phase": "baseline",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 48,
+      "pitch": 1.2280082702636719,
+      "roll": -0.47515869140625,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508675.010925,
+      "phase": "preflight",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 8,
+      "pitch": 1.0263099670410156,
+      "roll": -0.4130859375,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508675.45779,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 1.38409423828125,
+      "roll": -0.3494720458984375,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508675.750726,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 35,
+      "pitch": 0.7698192596435547,
+      "roll": -0.613861083984375,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508676.135563,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 0.978801727294922,
+      "roll": -0.4779510498046875,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508676.4882371,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 15,
+      "pitch": 1.179819107055664,
+      "roll": -0.47515869140625,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508676.920532,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 46,
+      "pitch": 1.3858680725097656,
+      "roll": -0.5442657470703125,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508677.26263,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 20,
+      "pitch": 1.3435688018798828,
+      "roll": -0.3469696044921875,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508677.590004,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 39,
+      "pitch": 1.2486686706542969,
+      "roll": -0.5413360595703125,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508677.972787,
+      "phase": "offset",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 44,
+      "pitch": -0.2485370635986328,
+      "roll": 0.817962646484375,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        46
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    },
+    {
+      "time": 1790508678.49377,
+      "phase": "returned",
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "ready; arm to control",
+      "imuReady": true,
+      "calibrated": true,
+      "sampleAgeMs": 8,
+      "pitch": -58.436851501464844,
+      "roll": -179.24526977539062,
+      "base": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "commanded": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ],
+          [
+            0.3499999940395355,
+            0,
+            0.029999999329447746
+          ]
+        ],
+        "joints": [
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            1
+          ],
+          [
+            60,
+            120,
+            1,
+            0
+          ],
+          [
+            60,
+            120,
+            0,
+            -1
+          ]
+        ],
+        "correction": 8,
+        "slew": 40,
+        "cutoff": 35
+      }
+    }
+  ],
+  "completed": false,
+  "returned": false,
+  "baseline": [
+    1.2753639221191406,
+    -0.44441477457682294
+  ],
+  "liftBefore": {
+    "enabled": 0,
+    "calOk": 1,
+    "n": 0,
+    "restMag": 980,
+    "thresh": 240,
+    "imu": 1
+  },
+  "response": [
+    -0.3429718017578125,
+    0.29076258341471356
+  ],
+  "error": "Tilt exceeds small-trial envelope"
+}

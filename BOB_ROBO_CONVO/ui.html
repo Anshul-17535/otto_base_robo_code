@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anvyxo · Live Dashboard</title>
+<style>
+:root{color-scheme:dark;--bg:#0c141b;--panel:#152128;--edge:#2a3f43;--ink:#edf5f3;--mut:#97aaa7;--grn:#86e4c6;--blu:#7fb2ff;--amb:#f2c66b;--red:#ff7a7a;--pur:#c4a0f5;font-family:system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);min-height:100vh}
+header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 20px;border-bottom:1px solid var(--edge);background:#0e1820}
+.brand{font-weight:850;font-size:20px;letter-spacing:3px;white-space:nowrap}
+.brand span{color:var(--grn)}
+.pill{font-size:12px;color:var(--mut);border:1px solid var(--edge);border-radius:30px;padding:5px 11px;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.pill.live{color:var(--grn);border-color:#2f5a4f}
+.pill.mic{color:var(--blu);border-color:#2c405f}
+.pill.rec{color:#ff7a7a;border-color:#5a2c2c;animation:pulse 1s infinite}
+.pill.mock{color:var(--amb);border-color:#5a441a}
+.dot{width:8px;height:8px;border-radius:50%;background:#6d8e87;flex:none}
+.dot.on{background:var(--grn);box-shadow:0 0 12px var(--grn);animation:pulse 1.4s infinite}
+.dot.mock{background:var(--amb)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.spacer{flex:1}
+.btn{padding:9px 14px;border:0;border-radius:10px;background:var(--grn);color:#0b2420;font:inherit;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.btn.sec{background:#2b3c43;color:#e6f2ed}
+.btn.warn{background:#3d2800;color:var(--amb);border:1px solid #5a441a}
+.btn.danger{background:#2d1414;color:var(--red);border:1px solid #5a2c2c}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.status{padding:9px 20px;font-size:13px;color:var(--grn);border-bottom:1px solid var(--edge);background:#0e1820;min-height:36px;display:flex;align-items:center;gap:8px}
+
+/* main layout */
+main{display:flex;height:calc(100vh - 128px);min-height:0}
+.left-col{display:flex;flex-direction:column;flex:1 1 0;min-width:0;padding:16px 18px;border-right:1px solid var(--edge);overflow:hidden}
+.right-col{width:340px;flex:none;display:flex;flex-direction:column;padding:14px 16px;gap:14px;overflow-y:auto}
+
+h2{margin:0 0 10px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mut);font-weight:700}
+
+/* chat */
+#chat{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-right:4px}
+.msg{max-width:82%;padding:10px 13px;border-radius:14px;line-height:1.4;font-size:14px;animation:in .22s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg .who{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;opacity:.65;margin-bottom:3px}
+.msg.bob{align-self:flex-start;background:#173a32;border:1px solid #2f5a4f}
+.msg.user{align-self:flex-end;background:#1d2b34;border:1px solid var(--edge)}
+.msg.db2{align-self:flex-start;background:#152a44;border:1px solid #2c405f}
+.msg.db2 .who{color:var(--blu)}
+.msg.system{align-self:center;background:transparent;border:1px dashed var(--edge);color:var(--mut);font-size:12px;padding:5px 10px;border-radius:18px;max-width:92%;text-align:center}
+.empty{color:var(--mut);font-size:13px;margin:auto;text-align:center;line-height:1.7}
+
+/* typed chat */
+.type-row{display:flex;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--edge)}
+#typeInput{flex:1;background:#152128;border:1px solid var(--edge);border-radius:9px;padding:9px 12px;color:var(--ink);font:inherit;font-size:14px;outline:none}
+#typeInput:focus{border-color:var(--grn)}
+#typeSend{padding:9px 16px;border-radius:9px;background:var(--grn);border:0;color:#0b2420;font-weight:700;cursor:pointer;font-size:13px}
+#typeSend:disabled{opacity:.4;cursor:not-allowed}
+
+/* right-col panels */
+.panel{background:var(--panel);border:1px solid var(--edge);border-radius:12px;padding:13px 14px}
+.panel h3{margin:0 0 10px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mut);font-weight:700}
+
+/* select / toggle rows */
+.row{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.row label{font-size:12px;color:var(--mut);flex:none;min-width:72px}
+select{background:#1e2f35;border:1px solid var(--edge);border-radius:7px;color:var(--ink);padding:5px 8px;font:inherit;font-size:12px;flex:1}
+select:focus{outline:none;border-color:var(--grn)}
+.toggle-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.toggle-row label{font-size:12px;color:var(--mut)}
+input[type=checkbox]{accent-color:var(--grn);width:15px;height:15px;cursor:pointer}
+
+/* latency table */
+.lat-table{width:100%;border-collapse:collapse;font-size:11px}
+.lat-table th{color:var(--mut);text-align:left;padding:3px 4px;border-bottom:1px solid var(--edge);font-weight:600}
+.lat-table td{padding:3px 4px;border-bottom:1px solid #1e2e33}
+.lat-table tr:last-child td{border:none}
+.badge{display:inline-block;padding:1px 6px;border-radius:10px;font-size:10px;font-weight:700}
+.badge.ok{background:#183028;color:var(--grn)}
+.badge.slow{background:#2d1e00;color:var(--amb)}
+.badge.fail{background:#2d1414;color:var(--red)}
+
+/* robot status bar */
+.robot-status{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--mut)}
+.robot-dot{width:8px;height:8px;border-radius:50%;background:#6d8e87;flex:none}
+.robot-dot.online{background:var(--grn)}
+.robot-dot.mock{background:var(--amb)}
+.robot-dot.offline{background:var(--red)}
+
+/* benchmark mini-bars */
+.bar-wrap{display:flex;align-items:center;gap:6px;margin:3px 0}
+.bar-label{font-size:11px;color:var(--mut);min-width:56px}
+.bar-track{flex:1;height:8px;background:#1e2e33;border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;background:var(--grn);transition:width .4s}
+.bar-ms{font-size:10px;color:var(--mut);min-width:44px;text-align:right}
+
+a{color:var(--grn);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">ANVYXO<span>.</span></div>
+  <span class="pill" id="modePill"><span class="dot" id="modeDot"></span><span id="modeText">Connecting…</span></span>
+  <span class="pill mic" id="micPill">🎙 <span id="micText">—</span></span>
+  <span class="pill mock" id="mockPill" style="display:none">🤖 <span id="mockText">Mock robot</span></span>
+  <span class="spacer"></span>
+  <a class="btn sec" href="/imu-view">Motion studio</a>
+  <button class="btn" id="demo" title="Play the scripted ANVYXO intro skit (no mic)">🎬 Intro demo</button>
+  <button class="btn" id="start">Start conversation</button>
+  <button class="btn sec" id="stop">Stop</button>
+  <button class="btn sec" id="game" title="Rock-Paper-Scissors (Bob always wins)">🎮 Game</button>
+  <button class="btn sec" id="tiltdemo" title="Liquid-eyes tilt + shake demo">👁 Tilt demo</button>
+  <button class="btn sec" id="scare" title="Trigger pick-up/shake reaction">🫨 Scare</button>
+</header>
+<div class="status"><span id="statusText">Connecting to Anvyxo…</span></div>
+
+<main>
+  <!-- ── Left: conversation ── -->
+  <div class="left-col">
+    <h2>Conversation</h2>
+    <div id="chat"><div class="empty" id="chatEmpty">Idle — press <b>Start conversation</b> or type a message below.<br>The conversation streams here message by message.</div></div>
+    <!-- Typed-chat (maps to POST /test/say) -->
+    <div class="type-row">
+      <input id="typeInput" type="text" placeholder="Type a message and press Enter or Send…" autocomplete="off">
+      <button id="typeSend" class="btn">Send</button>
+    </div>
+  </div>
+
+  <!-- ── Right: controls + diagnostics ── -->
+  <div class="right-col">
+
+    <!-- LLM selector -->
+    <div class="panel">
+      <h3>🧠 LLM / Model</h3>
+      <div class="row">
+        <label>Backend</label>
+        <select id="llmBackend">
+          <option value="ollama">Ollama (local)</option>
+          <option value="watsonx">Watsonx</option>
+        </select>
+      </div>
+      <div class="row" id="ollamaModelRow">
+        <label>Model</label>
+        <select id="ollamaModel">
+          <option value="qwen2.5:7b">qwen2.5:7b (default)</option>
+          <option value="qwen2.5:3b">qwen2.5:3b (fast)</option>
+          <option value="llama3.2:3b">llama3.2:3b</option>
+          <option value="llama3.2:1b">llama3.2:1b (fastest)</option>
+          <option value="phi3:mini">phi3:mini</option>
+          <option value="mistral:7b">mistral:7b</option>
+        </select>
+      </div>
+      <div class="row" id="wxModelRow" style="display:none">
+        <label>Model</label>
+        <select id="wxModel">
+          <option value="meta-llama/llama-3-3-70b-instruct">llama-3-3-70b</option>
+          <option value="meta-llama/llama-3-2-3b-instruct">llama-3-2-3b (fast)</option>
+          <option value="ibm/granite-3-3-8b-instruct">granite-3-3-8b</option>
+        </select>
+      </div>
+      <button class="btn sec" id="applyLlm" style="width:100%;margin-top:4px">Apply</button>
+    </div>
+
+    <!-- TTS selector -->
+    <div class="panel">
+      <h3>🔊 TTS / Voice</h3>
+      <div class="row">
+        <label>Engine</label>
+        <select id="ttsEngine">
+          <option value="say">macOS say (fast)</option>
+          <option value="piper">Piper (neural)</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>Voice</label>
+        <select id="ttsVoice">
+          <option value="Samantha">Samantha (default)</option>
+          <option value="Alex">Alex</option>
+          <option value="Karen">Karen</option>
+          <option value="Daniel">Daniel</option>
+          <option value="Moira">Moira</option>
+          <option value="Tessa">Tessa</option>
+          <option value="Serena">Serena</option>
+          <option value="Fiona">Fiona</option>
+        </select>
+      </div>
+      <div class="row">
+        <label>Rate (Hz)</label>
+        <select id="ttsRate">
+          <option value="16000">16000 (default)</option>
+          <option value="22050">22050 (hi-fi)</option>
+          <option value="8000">8000 (minimal)</option>
+        </select>
+      </div>
+      <div class="toggle-row">
+        <input type="checkbox" id="ttsPlayLocal">
+        <label for="ttsPlayLocal">Play locally on Mac (no robot needed)</label>
+      </div>
+      <button class="btn sec" id="applyTts" style="width:100%;margin-top:4px">Apply + Test</button>
+    </div>
+
+    <!-- Robot / mock mode -->
+    <div class="panel">
+      <h3>🤖 Robot Target</h3>
+      <div class="toggle-row">
+        <input type="checkbox" id="useMock">
+        <label for="useMock">Use mock robot (offline test mode)</label>
+      </div>
+      <div class="row">
+        <label>Host</label>
+        <input id="robotHost" type="text" style="flex:1;background:#1e2f35;border:1px solid var(--edge);border-radius:7px;color:var(--ink);padding:5px 8px;font-size:12px" placeholder="192.168.1.12">
+      </div>
+      <div class="robot-status" id="robotStatusRow" style="margin:6px 0">
+        <span class="robot-dot" id="robotDot"></span>
+        <span id="robotStatusText">Checking…</span>
+      </div>
+      <button class="btn sec" id="applyRobot" style="width:100%;margin-top:4px">Apply</button>
+      <button class="btn warn" id="startMockBtn" style="width:100%;margin-top:6px">▶ Start mock robot (port 8092)</button>
+    </div>
+
+    <!-- Latency dashboard -->
+    <div class="panel" id="latPanel">
+      <h3>⏱ Latency (last turn)</h3>
+      <div id="latContent">
+        <div style="color:var(--mut);font-size:12px">Run a conversation turn to see latency breakdown.</div>
+      </div>
+    </div>
+
+    <!-- Benchmark runner -->
+    <div class="panel">
+      <h3>🏁 Benchmarks</h3>
+      <div class="toggle-row">
+        <input type="checkbox" id="benchQuick" checked>
+        <label for="benchQuick">Quick (3 prompts only)</label>
+      </div>
+      <div style="display:flex;gap:6px;margin-top:6px">
+        <button class="btn sec" id="benchLlm" style="flex:1;font-size:11px">LLM bench</button>
+        <button class="btn sec" id="benchTts" style="flex:1;font-size:11px">TTS bench</button>
+        <button class="btn sec" id="benchSim" style="flex:1;font-size:11px">Sim</button>
+      </div>
+      <div id="benchStatus" style="margin-top:8px;font-size:11px;color:var(--mut)"></div>
+      <div id="benchResults" style="margin-top:8px"></div>
+    </div>
+
+  </div><!-- right-col -->
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+const chat=$('chat');
+let lastSeq=0, busy=false;
+let lastTurn={};   // track latency of the most recent /test/say call
+
+/* ── helpers ── */
+async function api(path,body){
+  const opt=body===undefined?{}:{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)};
+  const r=await fetch(path,opt); const d=await r.json().catch(()=>({}));
+  if(!r.ok) throw Error(d.error||('HTTP '+r.status)); return d;
+}
+function addMsg(m){
+  $('chatEmpty')?.remove();
+  const el=document.createElement('div'); el.className='msg '+m.role;
+  const label={user:'You',bob:'Anvyxo',db2:'Db2 · expert',system:''}[m.role]??m.role;
+  const t=new Date(m.ts*1000).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
+  if(m.role==='system'){ el.textContent=m.text; }
+  else{ el.innerHTML='<span class="who">'+label+' · '+t+'</span>'; el.append(document.createTextNode(m.text)); }
+  chat.appendChild(el);
+  chat.scrollTop=chat.scrollHeight;
+}
+
+/* ── poll /events ── */
+async function poll(){
+  try{
+    const d=await api('/events?since='+lastSeq);
+    const convo=d.mode==='convo', demo=d.mode==='demo', active=convo||demo;
+    $('modeText').textContent=demo?'Demo':(convo?'Conversation':'Idle');
+    $('modePill').classList.toggle('live',active);
+    $('modeDot').classList.toggle('on',active);
+    $('start').disabled=active; $('demo').disabled=active; $('stop').disabled=!active;
+    const rec=!!d.mic_active;
+    $('micPill').classList.toggle('rec',rec);
+    $('micText').textContent=rec?('● recording · '+(d.mic||'')+' mic'):((d.mic||'—')+' mic');
+    $('statusText').textContent=d.status||(convo?'In conversation':'Idle');
+    for(const m of d.messages){ addMsg(m); if(m.id>lastSeq) lastSeq=m.id; }
+    // show mock pill if mock robot
+    const isMock=d.robot_host&&(d.robot_host.includes('8092')||d.robot_host.includes('localhost'));
+    $('mockPill').style.display=isMock?'':'none';
+    // update robot host field
+    if(d.robot_host && !$('robotHost').value) $('robotHost').value=d.robot_host;
+  }catch(e){ $('statusText').textContent='Server unavailable — is server.py running?'; }
+}
+
+/* ── mode buttons ── */
+for(const [b,mode] of [['start','convo'],['stop','idle'],['demo','demo']]) $(b).addEventListener('click',async()=>{
+  if(busy)return; busy=true; $('start').disabled=$('stop').disabled=true;
+  try{ await api('/mode/'+mode,{}); }catch(e){ $('statusText').textContent=e.message; }
+  finally{ busy=false; poll(); }
+});
+$('scare').addEventListener('click',async()=>{
+  $('scare').disabled=true;
+  try{ await api('/test/scare',{}); }catch(e){ $('statusText').textContent=e.message; }
+  finally{ setTimeout(()=>{$('scare').disabled=false;},2500); }
+});
+$('game').addEventListener('click',async()=>{
+  $('game').disabled=true;
+  try{ await api('/test/game',{}); }catch(e){ $('statusText').textContent=e.message; }
+  finally{ setTimeout(()=>{$('game').disabled=false;},6000); }
+});
+$('tiltdemo').addEventListener('click',async()=>{
+  $('tiltdemo').disabled=true;
+  try{ await api('/test/tiltdemo',{}); }catch(e){ $('statusText').textContent=e.message; }
+  finally{ setTimeout(()=>{$('tiltdemo').disabled=false;},6000); }
+});
+
+/* ── typed chat ── */
+async function sendTyped(){
+  const text=$('typeInput').value.trim();
+  if(!text)return;
+  $('typeSend').disabled=true;
+  $('typeInput').value='';
+  const t0=performance.now();
+  try{
+    const d=await api('/test/say',{text});
+    const llm_ms=d.latency_ms||0;
+    const total_ms=performance.now()-t0;
+    lastTurn={text,llm_ms,total_ms,plan:d.plan||{}};
+    renderLatency(lastTurn);
+  }catch(e){ $('statusText').textContent=e.message; }
+  finally{ $('typeSend').disabled=false; }
+}
+$('typeSend').addEventListener('click',sendTyped);
+$('typeInput').addEventListener('keydown',e=>{ if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendTyped();} });
+
+/* ── latency panel ── */
+function renderLatency(t){
+  if(!t||!t.plan) return;
+  const llm=Math.round(t.llm_ms||0);
+  const total=Math.round(t.total_ms||0);
+  const expr=t.plan.expression||'?';
+  const move=t.plan.move_cmd||'—';
+  const db2=t.plan.need_outside_help?'<span class="badge slow">Db2</span>':'';
+  const stop=t.plan.should_stop?'<span class="badge fail">stop</span>':'';
+  const maxBar=Math.max(total,500);
+  $('latContent').innerHTML=`
+    <div class="bar-wrap"><span class="bar-label">LLM</span><div class="bar-track"><div class="bar-fill" style="width:${Math.min(100,llm/maxBar*100)}%;background:var(--grn)"></div></div><span class="bar-ms">${llm}ms</span></div>
+    <div class="bar-wrap"><span class="bar-label">Total RTT</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--pur)"></div></div><span class="bar-ms">${total}ms</span></div>
+    <div style="margin-top:6px;font-size:11px;color:var(--mut)">expr: ${expr}  move: ${move}  ${db2}${stop}</div>
+    <div style="font-size:11px;color:var(--mut);margin-top:3px">reply: "${(t.plan.reply_text||'').slice(0,60)}"</div>`;
+}
+
+/* ── LLM backend selector ── */
+$('llmBackend').addEventListener('change',()=>{
+  const ol=$('llmBackend').value==='ollama';
+  $('ollamaModelRow').style.display=ol?'':'none';
+  $('wxModelRow').style.display=ol?'none':'';
+});
+$('applyLlm').addEventListener('click',async()=>{
+  const backend=$('llmBackend').value;
+  const model=backend==='ollama'?$('ollamaModel').value:$('wxModel').value;
+  try{
+    const d=await api('/config/llm',{backend,model});
+    $('statusText').textContent=`LLM → ${backend} / ${model} ✓`;
+  }catch(e){ $('statusText').textContent='LLM config: '+e.message; }
+});
+
+/* ── TTS selector ── */
+$('applyTts').addEventListener('click',async()=>{
+  const engine=$('ttsEngine').value;
+  const voice=$('ttsVoice').value;
+  const rate=parseInt($('ttsRate').value);
+  const play_locally=$('ttsPlayLocal').checked;
+  try{
+    const d=await api('/config/tts',{engine,voice,rate,play_locally});
+    $('statusText').textContent=`TTS → ${engine}/${voice} @${rate}Hz ${play_locally?'+ local':''}  ✓  playing test phrase…`;
+  }catch(e){ $('statusText').textContent='TTS config: '+e.message; }
+});
+
+/* ── Robot target ── */
+$('useMock').addEventListener('change',()=>{
+  if($('useMock').checked) $('robotHost').value='localhost:8092';
+  else $('robotHost').value='';
+});
+$('applyRobot').addEventListener('click',async()=>{
+  const host=$('robotHost').value.trim();
+  const use_mock=$('useMock').checked;
+  try{
+    const d=await api('/config/robot',{host,use_mock});
+    $('statusText').textContent=`Robot → ${host} ${use_mock?'(mock)':''} ✓`;
+    checkRobotStatus();
+  }catch(e){ $('statusText').textContent='Robot config: '+e.message; }
+});
+$('startMockBtn').addEventListener('click',async()=>{
+  $('startMockBtn').disabled=true;
+  try{
+    const d=await api('/test/start_mock',{});
+    $('statusText').textContent='Mock robot started on port '+d.port;
+    $('robotHost').value='localhost:'+d.port;
+    $('useMock').checked=true;
+    await api('/config/robot',{host:'localhost:'+d.port,use_mock:true});
+    setTimeout(checkRobotStatus,1000);
+  }catch(e){ $('statusText').textContent='Mock start: '+e.message; }
+  finally{ setTimeout(()=>{$('startMockBtn').disabled=false;},3000); }
+});
+
+/* ── Robot status checker ── */
+async function checkRobotStatus(){
+  try{
+    const d=await api('/test/robot_status');
+    const dot=$('robotDot'), txt=$('robotStatusText');
+    if(d.mock){ dot.className='robot-dot mock'; txt.textContent='Mock robot online'; }
+    else if(d.online){ dot.className='robot-dot online'; txt.textContent=`Online (${d.host})`; }
+    else{ dot.className='robot-dot offline'; txt.textContent='Offline: '+d.error; }
+  }catch(e){ $('robotStatusText').textContent='Status check failed'; }
+}
+checkRobotStatus();
+setInterval(checkRobotStatus, 8000);
+
+/* ── Benchmark buttons ── */
+$('benchLlm').addEventListener('click',async()=>{
+  $('benchLlm').disabled=true;
+  $('benchStatus').textContent='Running LLM benchmark… (this takes a few seconds)';
+  $('benchResults').innerHTML='';
+  try{
+    const quick=$('benchQuick').checked;
+    const d=await api('/test/benchmark',{kind:'llm',quick});
+    renderBenchResults(d.results||{});
+    $('benchStatus').textContent='LLM benchmark complete ✓';
+  }catch(e){ $('benchStatus').textContent='Error: '+e.message; }
+  finally{ $('benchLlm').disabled=false; }
+});
+$('benchTts').addEventListener('click',async()=>{
+  $('benchTts').disabled=true;
+  $('benchStatus').textContent='Running TTS benchmark… (plays audio through Mac speaker)';
+  $('benchResults').innerHTML='';
+  try{
+    const d=await api('/test/benchmark',{kind:'tts',quick:true,play_locally:$('ttsPlayLocal').checked});
+    renderBenchResults(d.results||{});
+    $('benchStatus').textContent='TTS benchmark complete ✓';
+  }catch(e){ $('benchStatus').textContent='Error: '+e.message; }
+  finally{ $('benchTts').disabled=false; }
+});
+$('benchSim').addEventListener('click',async()=>{
+  $('benchSim').disabled=true;
+  $('benchStatus').textContent='Running conversation simulation… (no mic, mock LLM)';
+  $('benchResults').innerHTML='';
+  try{
+    const d=await api('/test/benchmark',{kind:'sim',quick:true});
+    renderBenchResults(d.results||{});
+    $('benchStatus').textContent='Simulation complete ✓';
+  }catch(e){ $('benchStatus').textContent='Error: '+e.message; }
+  finally{ $('benchSim').disabled=false; }
+});
+
+function renderBenchResults(results){
+  const el=$('benchResults');
+  if(!results||!Object.keys(results).length){ el.innerHTML='<div style="color:var(--mut);font-size:11px">No results</div>'; return; }
+  const max=Math.max(...Object.values(results).map(r=>r.p50_ms||r.total_ms||1));
+  let html='';
+  for(const [key,r] of Object.entries(results).sort((a,b)=>(a[1].p50_ms||0)-(b[1].p50_ms||0))){
+    const ms=r.p50_ms||r.total_ms||0;
+    const label=key.split('/').pop().slice(0,22);
+    const pct=Math.min(100,ms/max*100);
+    const cls=ms<500?'ok':ms<2000?'slow':'fail';
+    html+=`<div class="bar-wrap"><span class="bar-label" style="font-size:10px;width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${key}">${label}</span><div class="bar-track"><div class="bar-fill" style="width:${pct}%"></div></div><span class="bar-ms">${Math.round(ms)}ms <span class="badge ${cls}">${cls}</span></span></div>`;
+  }
+  el.innerHTML=html;
+}
+
+poll(); setInterval(poll,1000);
+</script>
+</body></html>

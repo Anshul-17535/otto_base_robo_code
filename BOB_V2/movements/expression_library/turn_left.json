@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "name": "Turn left",
+  "mode": "joints",
+  "expression": 6,
+  "frames": [
+    { "angles": [90, 90, 90, 90], "moveMs": 300, "holdMs": 60 },
+    { "angles": [87, 116, 120, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [87, 64, 120, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 64, 68, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 116, 68, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [87, 116, 120, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [87, 64, 120, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 64, 68, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 116, 68, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [87, 116, 120, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [87, 64, 120, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 64, 68, 64], "moveMs": 300, "holdMs": 20 },
+    { "angles": [101, 116, 68, 116], "moveMs": 300, "holdMs": 20 },
+    { "angles": [90, 90, 90, 90], "moveMs": 360, "holdMs": 180 }
+  ]
+}

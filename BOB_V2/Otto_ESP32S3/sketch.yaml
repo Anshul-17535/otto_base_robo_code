@@ -1,0 +1,25 @@
+# ESP32-S3-N16R8: servos + ST7735 + camera + SPH0645 mic + speaker + MPU IMU.
+# Mic BCLK43 / WS44 / DOUT48; USB Hardware CDC/JTAG routes Serial off UART0.
+# Speaker BCLK3 / WS45 / DIN14; MPU SDA46 / SCL0. Clip storage disabled.
+# Disconnect MPU SDA/SCL before flashing: GPIO46 must be low for ROM download.
+#
+# ── OTA PARTITION NOTE ────────────────────────────────────────────────────────
+# WiFi OTA (/firmware endpoint + ArduinoOTA on port 3232) requires TWO app
+# partition slots.  "huge_app" below has NO OTA slot — use it only for the
+# first USB flash.  After that, change PartitionScheme to one of:
+#
+#   min_spiffs   → PartitionScheme=min_spiffs   (1.9MB app×2 + 190KB SPIFFS)
+#   default_8MB  → PartitionScheme=default_8MB  (3MB app×2 + 1.5MB SPIFFS, 8MB flash)
+#   custom       → supply a custom_16mb_ota.csv (two 3MB app slots recommended)
+#
+# After changing the scheme, upload ONCE via USB. Every subsequent upload
+# can use WiFi OTA: open http://<robot_ip>/ota in a browser, or run:
+#   arduino-cli upload -p anvyxo-robo.local:3232 --fqbn ... --input-file ...
+# or:
+#   curl -X POST http://<ip>/firmware -H "X-OTA-Password: bob12345" -F "firmware=@*.bin"
+#
+# USB (huge_app, no OTA — only needed if OTA slot is ever wiped):
+# default_fqbn: esp32:esp32:esp32s3:FlashSize=16M,PartitionScheme=huge_app,PSRAM=opi,USBMode=hwcdc,CDCOnBoot=cdc,UploadSpeed=921600
+# WiFi OTA active — "16M Flash (3MB APP/9.9MB FATFS)". Robot flashed via WiFi 2026-10-04.
+# Use BOB_V2/ota_flash.sh for all future updates — no USB, no MPU disconnect needed.
+default_fqbn: esp32:esp32:esp32s3:FlashSize=16M,PartitionScheme=app3M_fat9M_16MB,PSRAM=opi,USBMode=hwcdc,CDCOnBoot=cdc,UploadSpeed=921600

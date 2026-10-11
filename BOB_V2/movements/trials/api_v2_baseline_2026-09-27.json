@@ -1,0 +1,14 @@
+{
+  "pose": [
+    90,
+    90,
+    90,
+    39
+  ],
+  "channel": 3,
+  "delta": 1,
+  "samples": [],
+  "completed": false,
+  "returned": false,
+  "error": "timed out"
+}

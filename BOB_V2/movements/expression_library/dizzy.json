@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "name": "Dizzy",
+  "mode": "joints",
+  "expression": 4,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        134,
+        116,
+        90,
+        90
+      ],
+      "moveMs": 176,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        116,
+        134,
+        134,
+        116
+      ],
+      "moveMs": 176,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        90,
+        90,
+        134,
+        116
+      ],
+      "moveMs": 176,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        59,
+        77,
+        116,
+        134
+      ],
+      "moveMs": 124,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        46,
+        59,
+        90,
+        90
+      ],
+      "moveMs": 176,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        59,
+        77,
+        59,
+        77
+      ],
+      "moveMs": 124,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 124,
+      "holdMs": 13
+    }
+  ]
+}

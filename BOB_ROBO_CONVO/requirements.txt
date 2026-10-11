@@ -1,0 +1,25 @@
+# BOB_ROBO_CONVO — Python dependencies
+#
+# Install:
+#   pip install -r requirements.txt
+#
+# System (macOS — one-time):
+#   brew install ffmpeg portaudio
+#
+# Pull Ollama model:
+#   ollama pull qwen2.5:3b
+
+faster-whisper>=1.0.0
+sounddevice>=0.4.6
+numpy>=1.24.0
+requests>=2.31.0
+python-dotenv>=1.0.0
+
+# ── Rock-paper-scissors hand-gesture recognition ──────────────────────────────
+# NOT installed here. mediapipe's only Python-3.14 wheel (1.0.x) crashes headless
+# on macOS, so the recognizer runs in a SEPARATE Python 3.11 venv (mediapipe
+# 0.10.x). Create it once with:
+#
+#     ./setup_gesture.sh
+#
+# The ~8 MB gesture model downloads automatically on first use.

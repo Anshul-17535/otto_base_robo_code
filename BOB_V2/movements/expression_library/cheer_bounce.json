@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "Cheer bounce",
+  "mode": "joints",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 63
+    },
+    {
+      "angles": [
+        126,
+        126,
+        54,
+        54
+      ],
+      "moveMs": 144,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        54,
+        54,
+        126,
+        126
+      ],
+      "moveMs": 288,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        126,
+        126,
+        54,
+        54
+      ],
+      "moveMs": 288,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 144,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 90
+    }
+  ]
+}

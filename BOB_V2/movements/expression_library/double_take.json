@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "name": "Double take",
+  "mode": "joints",
+  "expression": 3,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 14
+    },
+    {
+      "angles": [
+        74,
+        98,
+        106,
+        82
+      ],
+      "moveMs": 120,
+      "holdMs": 27
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        74,
+        98,
+        106,
+        82
+      ],
+      "moveMs": 120,
+      "holdMs": 22
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 36
+    }
+  ]
+}

@@ -1,0 +1,1848 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOB • Robot Studio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI",system-ui,sans-serif;background:#0f172a;color:#e2e8f0;font-size:13px;padding-bottom:30px}
+header{background:#1e293b;border-bottom:1px solid #334155;padding:12px 16px;display:flex;align-items:center;gap:8px}
+header h1{font-size:16px;font-weight:700;color:#f1f5f9;flex:1}
+.dot{width:9px;height:9px;border-radius:50%;background:#22c55e;flex-shrink:0}
+.wrap{max-width:500px;margin:0 auto;padding:12px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:14px;margin-bottom:12px}
+.card-title{font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px}
+.dpad{display:grid;grid-template-columns:repeat(3,58px);grid-template-rows:repeat(3,58px);gap:7px;justify-content:center}
+.dpad button{width:58px;height:58px;border-radius:9px;border:none;background:#1e3a5f;color:#e2e8f0;font-size:22px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .12s,transform .1s}
+.dpad button:active{background:#3b82f6;transform:scale(.91)}
+.dpad .stop{background:#1a2e05;color:#86efac;font-size:12px;font-weight:800}
+.dpad .empty{background:transparent;pointer-events:none}
+/* ── Expression buttons ── */
+.expr-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.xbtn{padding:14px 4px;border-radius:10px;border:2px solid transparent;font-size:22px;font-weight:800;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:border-color .15s,transform .1s;line-height:1.5;text-align:center;background:#1e293b;color:#e2e8f0}
+.xbtn .xl{font-size:10px;font-weight:700;display:block;margin-top:2px;color:#64748b}
+.xbtn:active{transform:scale(.93)}
+.xbtn.active{border-color:#fbbf24;box-shadow:0 0 10px rgba(251,191,36,.4)}
+.xbtn-happy{background:#0f2e18}
+.xbtn-sad{background:#0f1e3a}
+.xbtn-angry{background:#2e0f0f}
+.xbtn-surprised{background:#1e1a00}
+.xbtn-sleepy{background:#1a1a2e}
+.xbtn-love{background:#2e0f1e}
+.act-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.abtn{padding:12px 8px;border-radius:8px;border:none;font-size:13px;font-weight:700;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.abtn:active{transform:scale(.95)}
+.abtn-dance{background:#581c87;color:#e9d5ff}
+.abtn-stand{background:#0f766e;color:#99f6e4}
+.dance-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:8px}
+.dbtn{padding:10px 4px;border-radius:8px;border:1px solid #334155;font-size:11px;font-weight:700;cursor:pointer;-webkit-tap-highlight-color:transparent;text-align:center;line-height:1.4;color:#e2e8f0}
+.dbtn:active{transform:scale(.94);filter:brightness(1.3)}
+.dbtn-bounce{background:#1a0030}
+.dbtn-moon{background:#001a30}
+.dbtn-shimmy{background:#1a1a00}
+.dbtn-spin{background:#001a10}
+.dbtn-wave{background:#1a0010}
+.sl-row{margin-bottom:10px}
+.sl-row:last-child{margin-bottom:0}
+.sl-top{display:flex;justify-content:space-between;margin-bottom:4px;font-size:12px;color:#94a3b8}
+.sl-top span{color:#7dd3fc;font-weight:700;min-width:36px;text-align:right}
+input[type=range]{width:100%;-webkit-appearance:none;height:5px;border-radius:3px;background:#334155;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#3b82f6;cursor:pointer}
+.trim-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.trim-item .tlabel{font-size:10px;color:#64748b;margin-bottom:5px}
+.trim-ctrl{display:flex;align-items:center;gap:5px}
+.trim-ctrl button{width:28px;height:28px;border-radius:6px;border:none;background:#334155;color:#e2e8f0;font-size:15px;font-weight:700;cursor:pointer;flex-shrink:0}
+.trim-ctrl button:active{background:#3b82f6}
+.trim-ctrl button.big{width:26px;font-size:11px;font-weight:800;color:#fbbf24;background:#2d2008}
+.trim-ctrl button.big:active{background:#a16207}
+.trim-val{flex:1;text-align:center;font-size:15px;font-weight:800;color:#7dd3fc}
+.save-bar{display:flex;gap:8px;margin-top:12px}
+.sbtn{flex:1;padding:11px;border-radius:8px;border:none;font-size:13px;font-weight:700;cursor:pointer}
+.sbtn:active{transform:scale(.96)}
+.sbtn-save{background:#166534;color:#bbf7d0}
+.sbtn-reset{background:#450a0a;color:#fca5a5}
+.code-box{background:#0f172a;border:1px solid #1e3a5f;border-radius:6px;padding:9px 11px;font-family:monospace;font-size:11px;color:#86efac;word-break:break-all;margin-top:10px}
+.copy-btn{width:100%;margin-top:7px;padding:8px;border-radius:7px;border:none;background:#1e3a5f;color:#7dd3fc;font-size:11px;font-weight:700;cursor:pointer}
+.copy-btn:active{background:#1d4ed8;color:#fff}
+.audio-row{display:flex;gap:8px;margin-bottom:10px}
+.rec-btn{flex:1;padding:12px 8px;border-radius:8px;border:none;font-size:13px;font-weight:700;cursor:pointer;-webkit-tap-highlight-color:transparent;background:#450a0a;color:#fca5a5;transition:background .15s}
+.rec-btn.active{background:#dc2626;color:#fff;animation:pulse .6s infinite alternate}
+@keyframes pulse{from{opacity:1}to{opacity:.6}}
+.rec-btn:active{transform:scale(.95)}
+.speak-row{display:flex;gap:6px}
+.speak-input{flex:1;padding:10px 10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#e2e8f0;font-size:13px;outline:none}
+.speak-input:focus{border-color:#3b82f6}
+.speak-btn{padding:10px 16px;border-radius:8px;border:none;background:#1e3a5f;color:#7dd3fc;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.speak-btn:active{background:#1d4ed8;color:#fff;transform:scale(.95)}
+.log-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.log-hdr span{font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.06em}
+.log-hdr button{background:none;border:none;color:#475569;font-size:10px;cursor:pointer}
+#log{height:180px;overflow-y:auto;font-family:monospace;font-size:11px;line-height:1.8}
+.lo{color:#64748b}.lk{color:#4ade80}.lw{color:#fbbf24}.le{color:#f87171;font-weight:700}.lh{color:#7dd3fc;font-weight:700}
+#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#22c55e;color:#fff;padding:7px 16px;border-radius:16px;font-size:12px;font-weight:700;opacity:0;transition:opacity .25s;pointer-events:none;white-space:nowrap;z-index:99}
+
+/* BOB Studio — self-contained, no network fonts or assets required. */
+:root{color-scheme:dark;--surface:#141d29;--line:#2a3748;--mint:#9aefca;--muted:#a0aec0}
+body{background:#0b111a;color:#edf2f8;font-size:14px;line-height:1.5;padding-bottom:48px;background-image:radial-gradient(ellipse at 85% 0%,#15323888,transparent 45%)}
+header{max-width:1440px;margin:auto;background:transparent;border-bottom:1px solid var(--line);padding:22px 32px;gap:14px;flex-wrap:wrap}
+header h1{font-size:20px;letter-spacing:.12em}header h1 small{display:block;font-size:10px;color:var(--muted);letter-spacing:.2em;font-weight:500}
+.dot{width:12px;height:12px;background:var(--mint);box-shadow:0 0 0 6px #9aefca12}
+#hdrIp{color:var(--muted)!important;font-family:monospace}
+.wrap{max-width:1440px;padding:28px 32px;margin:auto}
+.studio-intro{display:flex;justify-content:space-between;align-items:center;gap:20px;margin:4px 0 30px}.eyebrow{color:var(--mint);text-transform:uppercase;letter-spacing:.2em;font-size:10px;font-weight:700}.studio-intro h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.045em;font-weight:650;line-height:1.2;margin:10px 0}.studio-intro p{color:var(--muted);font-size:13px}.studio-tag{border:1px solid #36524c;color:var(--mint);padding:8px 14px;border-radius:30px;font-size:11px;white-space:nowrap}
+.studio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}.studio-column{min-width:0}.section-label{color:var(--muted);font-size:10px;letter-spacing:.17em;text-transform:uppercase;margin:0 0 12px;padding:0 4px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px;box-shadow:0 8px 25px #00000012;min-width:0}.card-title{font-size:11px;color:#c2d1e2;letter-spacing:.1em;margin-bottom:18px}.card-title span{min-width:0}
+button,input,select{font-family:inherit}button{transition:filter .16s,transform .16s!important}button:hover{filter:brightness(1.18)}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--mint)!important;outline-offset:4px}button:disabled{opacity:.45;cursor:wait}button{min-height:38px}input,select{max-width:100%}.speak-input{min-width:0;padding:12px;background:#0d1520;border-color:var(--line)}
+.dpad{grid-template-columns:repeat(3,66px);grid-template-rows:repeat(3,60px);gap:9px;padding:8px 0}.dpad button{width:66px;height:60px;background:#233246;border:1px solid #34465e;border-radius:14px;font-size:23px}.dpad .stop{background:var(--mint);color:#103a2b;border-color:var(--mint);font-size:12px;letter-spacing:.08em}.dpad button:active{background:#477f71}
+.abtn,.sbtn,.speak-btn,.rec-btn{border-radius:10px;padding:12px 10px}.abtn-stand,.sbtn-save{background:#214d41;color:#c1f9df}.abtn-dance{background:#393454;color:#e0d6ff}.dbtn{border-radius:10px;min-height:58px}.xbtn{border:1px solid var(--line);border-radius:12px;padding:12px 4px}.xbtn .xl{color:#b7c5d5;letter-spacing:.03em}.xbtn.active{border-color:var(--mint)!important;box-shadow:inset 0 0 0 1px var(--mint);background:#203c35}.sl-top{color:#b2c0d0;margin-bottom:9px}.sl-row{margin-bottom:18px}input[type=range]{height:6px;accent-color:var(--mint)}input[type=range]::-webkit-slider-thumb{background:var(--mint);width:20px;height:20px}
+.trim-grid{grid-template-columns:1fr;gap:14px}.trim-item .tlabel{color:var(--muted);font-size:11px}.trim-ctrl button,.trim-ctrl button.big{width:42px;min-height:38px}.trim-val{font-family:monospace}.save-bar{flex-wrap:wrap}.code-box{line-height:1.7}.log-hdr span,.log-hdr button{color:var(--muted)}#toast{max-width:calc(100vw - 24px);white-space:normal;background:var(--mint);color:#103a2b;box-shadow:0 8px 32px #0008;border-radius:12px;padding:12px 20px}
+#camBox{background:radial-gradient(ellipse,#1c2d39,#0c141e)!important;border-radius:12px!important}#camMsg{color:#9aafbd;font-size:13px}#hwList>div{padding:8px 0;border-bottom:1px solid #263242;gap:8px;flex-wrap:wrap}#hwList{overflow-wrap:anywhere}#devLog{line-height:1.7}#bRecover{background:#283345!important;color:#d3ddea!important;border:1px solid #3b4a60!important;border-radius:9px!important}.card [style*="color:#64748b"],.card [style*="color:#475569"]{color:#9bacc0!important}
+@media(min-width:1100px){.studio-grid{grid-template-columns:1fr 1.15fr 1fr}}
+@media(max-width:1000px){.studio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-column:last-child{grid-column:1/-1}}
+@media(max-width:640px){header{padding:18px 16px;gap:12px}header h1{font-size:17px}#hdrIp{width:100%;padding-left:24px}.wrap{padding:22px 14px}.studio-grid{grid-template-columns:1fr;gap:10px}.studio-column:last-child{grid-column:auto}.studio-tag{display:none}.studio-intro{margin-bottom:24px}.card{padding:18px;border-radius:16px}.studio-intro p{max-width:29ch}.section-label{margin-top:8px}.trim-grid{grid-template-columns:1fr}.speak-row{flex-wrap:wrap}.speak-input{flex-basis:160px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="dot"></div>
+  <h1>BOB<small>ROBOT STUDIO / V2</small></h1>
+  <button id="bRecover" title="Panel blank or frozen? Re-initialise the screen and return to the Normal face" style="background:#7f1d1d;color:#fecaca;border:0;border-radius:6px;padding:7px 11px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap">&#128268; Recover Screen</button>
+  <span id="hdrIp" style="font-size:11px;color:#475569">192.168.4.1</span>
+</header>
+<div class="wrap">
+<div class="studio-intro"><div><div class="eyebrow">A little robot. A lot of personality.</div><h2>Make Bob come alive.</h2><p>Move, express, explore. Everything at your fingertips.</p></div><span class="studio-tag">ESP32-S3 · BOB V2</span></div><div class="studio-grid"><section class="studio-column" aria-label="01 / Movement & personality"><h2 class="section-label">01 / Movement & personality</h2><div class="card">
+  <div class="card-title">Movement</div>
+  <div class="dpad">
+    <div class="empty"></div><button id="bFwd" aria-label="Move forward">&#9650;</button><div class="empty"></div>
+    <button id="bLft" aria-label="Turn left">&#9664;</button><button class="stop" id="bStop">STOP</button><button id="bRgt" aria-label="Turn right">&#9654;</button>
+    <div class="empty"></div><button id="bBwd" aria-label="Move backward">&#9660;</button><div class="empty"></div>
+  </div>
+</div><div class="card">
+  <div class="card-title">Actions</div>
+  <div class="act-row">
+    <button class="abtn abtn-dance" id="bDance">&#127939; Auto Dance</button>
+    <button class="abtn abtn-stand" id="bStand">&#9654; Stand</button>
+  </div>
+  <div class="dance-grid" style="margin-top:8px">
+    <button class="dbtn dbtn-bounce" id="bD0">&#128171;<br><span style="font-size:9px">Bounce</span></button>
+    <button class="dbtn dbtn-moon"   id="bD1">&#128246;<br><span style="font-size:9px">Moonwalk</span></button>
+    <button class="dbtn dbtn-shimmy" id="bD2">&#9889;<br><span style="font-size:9px">Shimmy</span></button>
+    <button class="dbtn dbtn-spin"   id="bD3">&#128260;<br><span style="font-size:9px">Spin/Twist</span></button>
+    <button class="dbtn dbtn-wave"   id="bD4">&#127465;<br><span style="font-size:9px">Wave Bow</span></button>
+  </div>
+  <div style="margin-top:8px">
+    <button class="abtn" id="bRps" style="width:100%;background:#7c3aed;color:#ede9fe;font-size:13px">&#9994; Play Rock Paper Scissors</button>
+  </div>
+</div><div class="card">
+  <div class="card-title">&#128512; Expression</div>
+  <div class="expr-grid">
+    <button class="xbtn xbtn-happy active" id="xBtn0" data-expr="0">
+      &#128512;<span class="xl">Happy</span>
+    </button>
+    <button class="xbtn xbtn-sad" id="xBtn1" data-expr="1">
+      &#128542;<span class="xl">Sad</span>
+    </button>
+    <button class="xbtn xbtn-angry" id="xBtn2" data-expr="2">
+      &#128545;<span class="xl">Angry</span>
+    </button>
+    <button class="xbtn xbtn-surprised" id="xBtn3" data-expr="3">
+      &#128562;<span class="xl">Surprised</span>
+    </button>
+    <button class="xbtn xbtn-sleepy" id="xBtn4" data-expr="4">
+      &#128564;<span class="xl">Sleepy</span>
+    </button>
+    <button class="xbtn xbtn-love" id="xBtn5" data-expr="5">
+      &#128525;<span class="xl">Love</span>
+    </button>
+  </div>
+  <button class="xbtn active" id="xBtn6" data-expr="6" style="width:100%;background:#1e293b;margin-top:6px;font-size:16px;padding:10px 4px;border-radius:10px;border:2px solid #fbbf24">
+    &#128528;<span class="xl" style="display:inline;margin-left:8px;font-size:11px;color:#94a3b8;font-weight:700">Normal (default)</span>
+  </button>
+  <div id="exprStatus" style="font-size:10px;color:#64748b;text-align:center;margin-top:8px">Active: Normal</div>
+</div><div class="card">
+  <div class="card-title">&#128241; Screen Ticker</div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;line-height:1.6">
+    Type a message and tap Show — it sits still on the bottom bar of Bob's
+    screen for 5 seconds. Longer than 26 characters and it is split into
+    pages that swap every 1.5 s. Then the bar goes back to showing the IP.
+    The top bar always shows <strong style="color:#e2e8f0">BOB</strong> and the
+    WiFi icon (bright = joined the router, dim with a red slash = not).
+  </div>
+  <div class="speak-row">
+    <input class="speak-input" type="text" id="tickerText" placeholder="e.g. Hello from Bob" maxlength="108">
+    <button class="speak-btn" id="bTicker">&#9654; Show</button>
+  </div>
+  <div id="tickerStatus" style="font-size:11px;color:#64748b;margin-top:7px;min-height:14px"></div>
+</div><div class="card">
+  <div class="card-title">Motion Tuning</div>
+  <div class="sl-row">
+    <div class="sl-top">Step Speed (ms) <span id="vSpd">600</span></div>
+    <input type="range" id="sSpd" min="200" max="1200" value="600" step="25">
+  </div>
+  <div class="sl-row">
+    <div class="sl-top">Hip Swing (°) <span id="vHip">25</span></div>
+    <input type="range" id="sHip" min="5" max="45" value="25" step="1">
+  </div>
+  <div class="sl-row">
+    <div class="sl-top">Foot Tilt (°) <span id="vFt">20</span></div>
+    <input type="range" id="sFt" min="5" max="40" value="20" step="1">
+  </div>
+</div><div class="card">
+  <div class="card-title">&#9881; Motor Control</div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:12px;line-height:1.6">
+    Move each motor independently. <strong style="color:#e2e8f0">90° = natural centre</strong> —
+    motors move equal angles clockwise and anti-clockwise from there.<br>
+    <strong style="color:#fbbf24">Calibrate → 90°</strong> sends all four to their true neutral instantly.
+  </div>
+
+  <!-- 4 servo sliders -->
+  <div id="motorSliders"></div>
+
+  <!-- Calibrate button -->
+  <button class="sbtn" id="bServoCal" style="width:100%;background:#0f766e;color:#99f6e4;margin-top:4px;font-size:13px">
+    &#9654; Calibrate → 90° (all motors to natural centre)
+  </button>
+  <div id="motorCalStatus" style="font-size:11px;color:#64748b;text-align:center;margin-top:6px;min-height:14px"></div>
+
+  <!-- Assembly sub-section -->
+  <div style="margin-top:14px;padding-top:10px;border-top:1px solid #334155">
+    <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px">Horn Positioning (assembly only)</div>
+    <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;line-height:1.6">
+      Press <strong style="color:#fbbf24">Hold Raw 90°</strong> before attaching horns —
+      all servos go to exactly 90° with <em>no trim</em>, true mechanical centre.
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="sbtn" style="flex:2;background:#78350f;color:#fde68a" id="bAssembly">&#9654; Hold Raw 90°</button>
+      <button class="sbtn" style="flex:1;background:#1e293b;color:#94a3b8" id="bAssemblyOff">&#9632; Release</button>
+    </div>
+    <div id="assemblyStatus" style="font-size:11px;color:#64748b;text-align:center;margin-top:6px;min-height:14px"></div>
+  </div>
+</div><div class="card">
+  <div class="card-title">Servo Trim Calibration</div>
+  <div class="trim-grid" id="trimGrid"></div>
+  <div class="save-bar">
+    <button class="sbtn sbtn-save" id="bSave">&#128190; Save to Flash</button>
+    <button class="sbtn sbtn-reset" id="bReset">&#8635; Reset All Trims</button>
+  </div>
+  <div class="code-box" id="codeBox">int trim[4] = {0, 0, 0, 0};</div>
+  <button class="copy-btn" id="bCopy">&#128203; Copy for sketch</button>
+</div></section><section class="studio-column" aria-label="02 / Vision & sound"><h2 class="section-label">02 / Vision & sound</h2><div class="card" id="camCard">
+  <div class="card-title" style="display:flex;justify-content:space-between;align-items:center">
+    <span>&#128247; Camera</span><span id="camState" style="text-transform:none;letter-spacing:0">…</span>
+  </div>
+  <div id="camBox" style="background:#0f172a;border:1px solid #334155;border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#64748b;font-size:12px;text-align:center;padding:0">
+    <span id="camMsg">Camera off</span>
+    <img id="camImg" alt="camera" style="display:none;width:100%;height:100%;object-fit:contain">
+  </div>
+  <div class="save-bar">
+    <button class="sbtn sbtn-save" id="bCam">&#9654; Start camera</button>
+    <button class="sbtn" style="background:#1e3a5f;color:#7dd3fc" id="bSnap">&#128248; Snapshot</button>
+  </div>
+</div><div class="card">
+  <div class="card-title">&#127908; Audio</div>
+  <div class="audio-row">
+    <select class="speak-input" id="recSecs" style="flex:0 0 72px">
+      <option value="6">6 s</option><option value="3">3 s</option><option value="1">1 s</option>
+    </select>
+    <button class="rec-btn" id="bRecord">&#9679; Quick Record</button>
+    <button class="speak-btn" id="bPlayRobot" title="Replay last recording on Otto's speaker">&#128266; Robot</button>
+  </div>
+  <div style="font-size:10px;color:#fbbf24;margin-bottom:8px">
+    Quick record uses RAM — 3 s max. For <strong>longer recordings</strong> use the
+    &#127925; Sound Clips card further down (tens of seconds, saved to flash).
+  </div>
+  <div id="recStatus" style="font-size:11px;color:#64748b;margin-bottom:10px;min-height:14px"></div>
+  <audio id="recPlayer" controls style="display:none;width:100%;margin-bottom:10px"></audio>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:7px">Type a sentence and tap &#128266; Speak:</div>
+  <div style="display:flex;gap:6px;margin-bottom:7px">
+    <select class="speak-input" id="speakMode" style="flex:1">
+      <option value="voice">&#128483; Voice (SAM TTS)</option>
+      <option value="beep">&#127925; Beeps (old)</option>
+    </select>
+    <select class="speak-input" id="speakVoice" style="flex:1">
+      <option value="0">Sam</option>
+      <option value="2">Robot</option>
+      <option value="1">Elf</option>
+      <option value="3">Stuffy</option>
+      <option value="4">Old Lady</option>
+      <option value="5">E.T.</option>
+    </select>
+  </div>
+  <div class="sl-row" style="margin-bottom:7px">
+    <div class="sl-top">Volume <span id="vVol">100</span></div>
+    <input type="range" id="sVol" min="5" max="100" value="100" step="5">
+  </div>
+  <div class="sl-row" style="margin-bottom:7px">
+    <div class="sl-top">Voice Speed (lower = faster) <span id="vVSpeed">72</span></div>
+    <input type="range" id="sVSpeed" min="40" max="200" value="72" step="1">
+  </div>
+  <div class="sl-row" style="margin-bottom:7px">
+    <div class="sl-top">Voice Pitch (lower = higher) <span id="vVPitch">64</span></div>
+    <input type="range" id="sVPitch" min="30" max="120" value="64" step="1">
+  </div>
+  <div style="font-size:10px;color:#64748b;margin-bottom:7px">Tip: at 72 / 64 (defaults) each voice keeps its own preset sound.</div>
+  <div class="speak-row">
+    <input class="speak-input" type="text" id="speakText" placeholder="e.g. Hello I am Otto" maxlength="80">
+    <button class="speak-btn" id="bSpeak">&#128266; Speak</button>
+  </div>
+  <div id="speakStatus" style="font-size:11px;color:#64748b;margin-top:7px;min-height:14px"></div>
+</div><div class="card">
+  <div class="card-title">&#127822; Mac TTS — speak via Mac voice (Hindi / English)</div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;line-height:1.6">
+    Your Mac synthesises the speech using a high-quality neural voice, then
+    sends it to the robot at <strong style="color:#e2e8f0">full volume</strong>.
+    <br>For <strong style="color:#fbbf24">Hindi</strong> pick <em>Lekha</em> or <em>Kanya</em>.
+    For Hinglish / Indian English pick <em>Rishi</em>.
+    Needs <code style="color:#86efac">ffmpeg</code> on the Mac
+    (<code style="color:#86efac">brew install ffmpeg</code>) — or use the shell
+    script <code style="color:#86efac">mac_tts.sh</code> directly.
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px">
+    <select class="speak-input" id="macVoice">
+      <option value="Samantha">Samantha (EN, natural)</option>
+      <option value="Rishi">Rishi (Indian EN)</option>
+      <option value="Karen">Karen (AU English)</option>
+      <option value="Daniel">Daniel (British)</option>
+      <option value="Lekha">Lekha (Hindi &#2361;&#2367;&#2306;&#2342;&#2368;)</option>
+      <option value="Kanya">Kanya (Hindi newer)</option>
+    </select>
+    <select class="speak-input" id="macRate">
+      <option value="22050">Quality: 22 kHz</option>
+      <option value="16000">Quality: 16 kHz</option>
+      <option value="11025">Quality: 11 kHz</option>
+    </select>
+  </div>
+  <div class="speak-row" style="margin-bottom:6px">
+    <input class="speak-input" type="text" id="macTtsText" placeholder="e.g. नमस्ते मैं बॉब हूँ" maxlength="200">
+    <button class="speak-btn" id="bMacTts">&#128266; Speak</button>
+  </div>
+  <div id="macTtsStatus" style="font-size:11px;color:#64748b;min-height:14px"></div>
+</div><div class="card">
+  <div class="card-title">&#128269; Audio Diagnostics</div>
+  <div style="display:flex;gap:8px;margin-bottom:10px">
+    <button class="sbtn" style="background:#1e3a5f;color:#7dd3fc" id="bTone">&#128266; Speaker Test Tone</button>
+    <button class="sbtn" style="background:#2d2008;color:#fbbf24" id="bMicMeter">&#127897; Mic Meter: OFF</button>
+  </div>
+  <div style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px;margin-bottom:10px">
+    <div style="display:flex;justify-content:space-between;font-size:10px;color:#64748b;margin-bottom:4px">
+      <span>MIC LEVEL (talk / clap to test)</span><span id="micVal">—</span>
+    </div>
+    <div style="height:14px;background:#1e293b;border-radius:7px;overflow:hidden">
+      <div id="micBar" style="height:100%;width:0%;background:#22c55e;transition:width .2s"></div>
+    </div>
+    <div id="micVerdict" style="font-size:10px;color:#64748b;margin-top:5px;min-height:12px"></div>
+  </div>
+  <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin:12px 0 8px">Mic Fix — try other I2S configs</div>
+  <button class="sbtn" style="width:100%;background:#581c87;color:#e9d5ff;margin-bottom:8px" id="bMicScan">&#9881; Auto-Scan All 8 Mic Configs (make noise!)</button>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+    <select class="speak-input" id="mCh"><option value="0">Channel: LEFT</option><option value="1">Channel: RIGHT</option></select>
+    <select class="speak-input" id="mFmt"><option value="0">Format: I2S</option><option value="1">Format: MSB</option></select>
+    <select class="speak-input" id="mFix"><option value="1">SPH fix: ON</option><option value="0">SPH fix: OFF</option></select>
+    <select class="speak-input" id="mSh"><option value="14">Shift: 14 (SPH0645)</option><option value="16">Shift: 16 (INMP441)</option><option value="11">Shift: 11 (louder)</option></select>
+  </div>
+  <button class="sbtn" style="width:100%;background:#0f766e;color:#99f6e4;margin-bottom:10px" id="bMicApply">Apply Mic Config</button>
+  <button class="sbtn" style="width:100%;background:#166534;color:#bbf7d0" id="bDiag">&#129514; Run Full Diagnostic (plays 1 s tone)</button>
+  <pre id="diagOut" style="display:none;background:#0f172a;border:1px solid #1e3a5f;border-radius:6px;padding:9px;font-size:10px;color:#86efac;white-space:pre-wrap;word-break:break-all;margin-top:10px;max-height:260px;overflow-y:auto"></pre>
+</div><div class="card">
+  <div class="card-title">&#127925; Sound Clips — long recording &amp; your own music</div>
+
+  <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">
+    Record to flash — type ANY length up to <span id="recCap" style="color:#7dd3fc">…</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-bottom:6px">
+    <button class="dbtn" data-secs="5">5 s</button>
+    <button class="dbtn" data-secs="10">10 s</button>
+    <button class="dbtn" data-secs="20">20 s</button>
+    <button class="dbtn" data-secs="30">30 s</button>
+    <button class="dbtn" data-secs="60">60 s</button>
+  </div>
+  <div style="display:flex;gap:6px;margin-bottom:6px">
+    <input class="speak-input" type="number" id="recFileSecs" value="10" min="1" max="120" style="flex:0 0 76px">
+    <input class="speak-input" type="text" id="recFileName" value="rec.wav" placeholder="name.wav" style="flex:1">
+    <button class="speak-btn" id="bRecFile">&#9679; Record</button>
+  </div>
+  <div id="recFileStatus" style="font-size:11px;color:#64748b;margin-bottom:12px;min-height:14px">Recording length is limited by free flash, not RAM.</div>
+
+  <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">&#127911; Add music / MP3</div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:7px;line-height:1.6">
+    Pick any <strong>MP3, M4A, OGG or WAV</strong>. Your browser decodes it and sends
+    plain audio to Otto — the robot needs no MP3 decoder. Then choose:
+    <br><strong style="color:#99f6e4">Play Now</strong> = streams straight to the speaker,
+    <em>no storage used, any length</em> (phone must stay connected).
+    <br><strong style="color:#7dd3fc">Save to Robot</strong> = stored in flash, plays
+    later on its own, limited by free space.
+  </div>
+  <input class="speak-input" type="file" id="clipFile" accept="audio/*,.mp3,.wav,.m4a,.ogg" style="width:100%;margin-bottom:6px">
+  <select class="speak-input" id="clipRate" style="width:100%;margin-bottom:6px">
+    <option value="16000">Quality: 16 kHz (32 KB/s)</option>
+    <option value="22050">Quality: 22 kHz (44 KB/s)</option>
+    <option value="8000">Quality: 8 kHz (16 KB/s, longest)</option>
+  </select>
+  <div style="display:flex;gap:6px;margin-bottom:6px">
+    <button class="sbtn" style="background:#0f766e;color:#99f6e4" id="bClipStream">&#9654; Play Now (no storage)</button>
+    <button class="sbtn" style="background:#1e3a5f;color:#7dd3fc" id="bClipUpload">&#128190; Save to Robot</button>
+  </div>
+  <div id="clipUpStatus" style="font-size:11px;color:#64748b;margin-bottom:12px;min-height:14px"></div>
+
+  <div style="font-size:10px;font-weight:700;color:#475569;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">Stored clips</div>
+  <div style="background:#0f172a;border:1px solid #334155;border-radius:6px;padding:8px;margin-bottom:8px">
+    <div style="display:flex;justify-content:space-between;font-size:10px;color:#64748b;margin-bottom:4px">
+      <span>FLASH STORAGE</span><span id="fsVal">—</span>
+    </div>
+    <div style="height:10px;background:#1e293b;border-radius:5px;overflow:hidden">
+      <div id="fsBar" style="height:100%;width:0%;background:#22c55e;transition:width .3s"></div>
+    </div>
+  </div>
+  <div id="clipList" style="font-size:11px;color:#64748b">Loading…</div>
+  <button class="copy-btn" id="bClipRefresh">&#8635; Refresh clip list</button>
+</div></section><section class="studio-column" aria-label="03 / System & diagnostics"><h2 class="section-label">03 / System & diagnostics</h2><div class="card" id="hwCard">
+  <div class="card-title" style="display:flex;justify-content:space-between">
+    <span>&#129520; Hardware Status</span><span id="hwStep" style="text-transform:none;letter-spacing:0;color:#64748b"></span>
+  </div>
+  <div id="hwList" style="display:grid;gap:5px;font-size:12px">Checking…</div>
+  <div style="font-size:10px;color:#64748b;margin-top:9px;line-height:1.5">
+    <span style="color:#22c55e">&#9679;</span> working &nbsp;
+    <span style="color:#ef4444">&#9679;</span> not found / failed &nbsp;
+    <span style="color:#64748b">&#9679;</span> can't be checked (no feedback wire) &nbsp;
+    <span style="color:#eab308">&#9679;</span> starting
+  </div>
+</div><div class="card" id="imuCard">
+  <div class="card-title">&#127760; IMU — BNO055 Orientation &amp; Lift Detect</div>
+  <div id="imuOffline" style="font-size:11px;color:#f87171;margin-bottom:8px;display:none">
+    &#10005; IMU not answering &#8212; check SDA&#8594;GPIO21, SCL&#8594;GPIO22, VCC&#8594;3.3V, GND, AD0&#8594;GND.<br>
+    The robot keeps probing for it; everything else on this page still works.
+  </div>
+
+  <!-- 3D cube + labels side by side -->
+  <div style="display:flex;gap:14px;align-items:center;margin-bottom:12px">
+    <div style="perspective:260px;flex-shrink:0">
+      <div id="imuCube" style="width:64px;height:64px;position:relative;transform-style:preserve-3d;transform:rotateX(0deg) rotateY(0deg);transition:transform .1s linear">
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #3b82f6;background:rgba(59,130,246,0.13);transform:translateZ(32px)"></div>
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #3b82f6;background:rgba(59,130,246,0.07);transform:translateZ(-32px) rotateY(180deg)"></div>
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #7c5cd8;background:rgba(124,92,216,0.13);transform:rotateY(90deg) translateZ(32px)"></div>
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #7c5cd8;background:rgba(124,92,216,0.07);transform:rotateY(-90deg) translateZ(32px)"></div>
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #22c55e;background:rgba(34,197,94,0.13);transform:rotateX(90deg) translateZ(32px)"></div>
+        <div style="position:absolute;width:64px;height:64px;border:2px solid #22c55e;background:rgba(34,197,94,0.07);transform:rotateX(-90deg) translateZ(32px)"></div>
+      </div>
+    </div>
+    <div style="flex:1;font-size:10px">
+      <div style="color:#64748b;margin-bottom:4px">Pitch / Roll from accel</div>
+      <div style="display:flex;gap:8px;margin-bottom:3px">
+        <span style="color:#94a3b8">Pitch</span>
+        <span id="imuPitch" style="color:#7dd3fc;font-family:monospace;font-weight:700">0.0°</span>
+        <span style="color:#94a3b8">Roll</span>
+        <span id="imuRoll"  style="color:#fb923c;font-family:monospace;font-weight:700">0.0°</span>
+      </div>
+      <div style="color:#64748b;margin-bottom:4px;margin-top:6px">Motion delta vs rest</div>
+      <div style="height:10px;background:#1e293b;border-radius:5px;overflow:hidden;margin-bottom:3px">
+        <div id="imuDeltaBar" style="height:100%;width:0%;background:#22c55e;transition:width .1s"></div>
+      </div>
+      <div id="imuDeltaVal" style="color:#94a3b8;font-family:monospace">delta=0 thresh=4000</div>
+    </div>
+  </div>
+
+  <!-- Lift indicator -->
+  <div id="imuLiftBanner" style="display:none;background:#ef4444;color:#fff;border-radius:8px;padding:7px 12px;text-align:center;font-size:13px;font-weight:700;margin-bottom:10px;animation:pulse .5s infinite alternate">
+    &#9888; SCARED! &#8212; 5 foot flips, then it re-learns its resting pose
+  </div>
+
+  <!-- Calibration section -->
+  <div style="background:#0f1e10;border:1px solid #166534;border-radius:8px;padding:10px;margin-bottom:10px">
+    <div style="font-size:10px;font-weight:700;color:#22c55e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">&#127919; Lift Calibration</div>
+    <!-- Feature master switch: turning ON auto-calibrates via /liftdetect?on=1 -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;padding:8px;background:#0b1220;border:1px solid #1e293b;border-radius:6px">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#e2e8f0">Pick-up / shake reaction</div>
+        <div style="font-size:10px;color:#94a3b8">On &rarr; auto-calibrates now, then gets scared &amp; kicks when lifted</div>
+      </div>
+      <button class="sbtn" id="bLiftToggle" style="min-width:76px;background:#334155;color:#cbd5e1">&#8230;</button>
+    </div>
+    <!-- Help-me sound toggle: plays HelpmeSound.wav at full vol 2 s after scared face -->
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;padding:8px;background:#0b1220;border:1px solid #1e293b;border-radius:6px">
+      <div>
+        <div style="font-size:12px;font-weight:700;color:#e2e8f0">Help me sound</div>
+        <div style="font-size:10px;color:#94a3b8">On &rarr; plays HelpmeSound.wav at full volume 2 s after the scared face</div>
+      </div>
+      <button class="sbtn" id="bHelpMeToggle" style="min-width:76px;background:#334155;color:#cbd5e1">&#8230;</button>
+    </div>
+    <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;line-height:1.6">
+      Place the robot in its <strong style="color:#e2e8f0">normal standing position</strong> and tap
+      <strong style="color:#fbbf24">Calibrate Now</strong>. The robot samples ~3 s of readings to
+      learn what &ldquo;at rest&rdquo; feels like &#8212; then <strong style="color:#e2e8f0">zeroes every axis
+      against it</strong>, so the bars below read 0 and the cube sits square on its neutral
+      face however the IMU is mounted. Lift detection uses that actual resting gravity
+      vector, not a hardcoded constant.<br><br>
+      You only need this once. After every scare the robot <strong style="color:#e2e8f0">re-learns
+      its resting pose automatically</strong> from wherever it ends up, so it stays armed
+      without you touching this button again.
+    </div>
+    <div style="display:flex;gap:8px;margin-bottom:8px">
+      <button class="sbtn" style="flex:2;background:#166534;color:#bbf7d0" id="bImuCal">&#9654; Calibrate Now</button>
+      <div id="imuCalBadge" style="flex:1;border-radius:6px;padding:6px 8px;font-size:10px;font-weight:700;text-align:center;background:#1e293b;color:#475569">NOT CAL</div>
+    </div>
+    <div id="imuCalStatus" style="font-size:10px;color:#64748b;margin-bottom:8px;min-height:12px"></div>
+    <div id="imuCalDetail" style="display:none;font-size:10px;color:#64748b;font-family:monospace;margin-bottom:8px"></div>
+    <!-- Threshold slider -->
+    <div class="sl-row">
+      <div class="sl-top" style="font-size:11px">Lift sensitivity (delta threshold) <span id="vImuThresh">240</span></div>
+      <input type="range" id="sImuThresh" min="60" max="3000" value="240" step="30">
+    </div>
+    <div style="font-size:9px;color:#475569;margin-top:3px">
+      Lower = more sensitive (triggers easier). Higher = requires bigger motion. 1 g ≈ 981 LSB (BNO055 m/s² × 100).
+      Changes take effect immediately and are saved with the next Calibrate.
+    </div>
+  </div>
+
+  <!-- Raw values panels -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;margin-bottom:8px">
+    <div style="background:#0f172a;border:1px solid #1e3a5f;border-radius:6px;padding:8px">
+      <div style="color:#64748b;font-size:9px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Accelerometer (raw LSB)</div>
+      <div style="display:grid;grid-template-columns:20px 1fr;gap:3px;align-items:center">
+        <span style="color:#3b82f6;font-weight:700">X</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuAxFill" style="height:100%;width:50%;background:#3b82f6;transition:width .1s"></div></div>
+        <span style="color:#22c55e;font-weight:700">Y</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuAyFill" style="height:100%;width:50%;background:#22c55e;transition:width .1s"></div></div>
+        <span style="color:#f59e0b;font-weight:700">Z</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuAzFill" style="height:100%;width:50%;background:#f59e0b;transition:width .1s"></div></div>
+      </div>
+      <div id="imuAVals" style="color:#94a3b8;margin-top:5px;font-family:monospace;font-size:10px">ax=0 ay=0 az=0</div>
+    </div>
+    <div style="background:#0f172a;border:1px solid #1e3a5f;border-radius:6px;padding:8px">
+      <div style="color:#64748b;font-size:9px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px">Gyroscope (raw LSB)</div>
+      <div style="display:grid;grid-template-columns:20px 1fr;gap:3px;align-items:center">
+        <span style="color:#e879f9;font-weight:700">X</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuGxFill" style="height:100%;width:50%;background:#e879f9;transition:width .1s"></div></div>
+        <span style="color:#fb923c;font-weight:700">Y</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuGyFill" style="height:100%;width:50%;background:#fb923c;transition:width .1s"></div></div>
+        <span style="color:#38bdf8;font-weight:700">Z</span><div style="height:8px;border-radius:4px;background:#1e293b;overflow:hidden"><div id="imuGzFill" style="height:100%;width:50%;background:#38bdf8;transition:width .1s"></div></div>
+      </div>
+      <div id="imuGVals" style="color:#94a3b8;margin-top:5px;font-family:monospace;font-size:10px">gx=0 gy=0 gz=0</div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div id="imuStatus" style="font-size:10px;color:#64748b">Auto-polling 5 Hz</div>
+    <button class="sbtn" style="background:#1e3a5f;color:#7dd3fc;padding:6px 10px;font-size:11px" id="bImuToggle">&#9646;&#9646; Pause</button>
+  </div>
+</div><div class="card" id="wifiCard">
+  <div class="card-title">&#128246; WiFi Settings</div>
+  <div id="wifiStatusBar" style="font-size:11px;margin-bottom:10px;padding:7px 10px;border-radius:6px;background:#0f172a;border:1px solid #334155;color:#94a3b8">
+    Loading…
+  </div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:10px;line-height:1.6">
+    The robot always broadcasts <strong style="color:#e2e8f0">Bob_robo</strong> /
+    <strong style="color:#e2e8f0">bob12345</strong> so you can always reach it at
+    <strong style="color:#86efac">192.168.4.1</strong>.<br>
+    Enter your home WiFi below — the robot will join it and show the new IP on screen.
+    <strong style="color:#fbbf24">2.4 GHz only</strong> — ESP32 cannot see 5 GHz networks.
+  </div>
+  <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:8px">
+    <input class="speak-input" type="text"     id="wifiSsid" placeholder="Home WiFi name (SSID)" maxlength="32" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false">
+    <input class="speak-input" type="password" id="wifiPass" placeholder="Password (leave blank if open)" maxlength="63" autocomplete="new-password">
+  </div>
+  <button class="sbtn" style="width:100%;background:#166534;color:#bbf7d0" id="bWifiSave">&#128246; Save &amp; Connect</button>
+  <div id="wifiSaveStatus" style="font-size:11px;color:#64748b;margin-top:7px;min-height:14px"></div>
+</div><div class="card">
+  <div class="card-title">&#128203; Device Log — restart debugging</div>
+  <div style="font-size:11px;color:#94a3b8;margin-bottom:8px;line-height:1.6">
+    This log lives in RTC memory and <strong style="color:#fbbf24">survives restarts</strong>.
+    After a reboot: reconnect to Bob_robo WiFi, tap Refresh — the lines <em>above</em> the last
+    "===== BOOT" marker show what the robot was doing when it died, and the boot line names
+    the reset reason (BROWNOUT = power problem, PANIC = firmware crash).
+    Tap <strong>Copy</strong> and paste the whole thing when asking for help.
+  </div>
+  <div style="display:flex;gap:6px;margin-bottom:8px">
+    <button class="sbtn" style="background:#1e3a5f;color:#7dd3fc" id="bLogRefresh">&#8635; Refresh</button>
+    <button class="sbtn" style="background:#2d2008;color:#fbbf24" id="bLogAuto">Auto: OFF</button>
+    <button class="sbtn" style="background:#166534;color:#bbf7d0" id="bLogCopy">&#128203; Copy</button>
+    <button class="sbtn" style="background:#450a0a;color:#fca5a5" id="bLogClear">Clear</button>
+  </div>
+  <pre id="devLog" style="background:#0f172a;border:1px solid #1e3a5f;border-radius:6px;padding:9px;font-size:10px;color:#86efac;white-space:pre-wrap;word-break:break-all;max-height:280px;overflow-y:auto;margin:0">Tap Refresh to load the device log.</pre>
+</div><div class="card">
+  <div class="log-hdr"><span>Log</span><button id="bClearLog">clear</button></div>
+  <div id="log"></div>
+</div></section></div>
+
+</div>
+<div id="toast"></div>
+
+<script>
+var trims=[0,0,0,0];
+var CH=['Left Hip','Left Foot','Right Hip','Right Foot'];
+var EXPR_NAMES=['Happy','Sad','Angry','Surprised','Sleepy','Love','Normal'];
+var curExpr=6;
+
+function toast(m){var e=document.getElementById('toast');e.textContent=m;e.style.opacity=1;clearTimeout(e._t);e._t=setTimeout(function(){e.style.opacity=0;},1700);}
+
+function log(type,m){
+  var b=document.getElementById('log');
+  var cls={ok:'lk',warn:'lw',error:'le',head:'lh',info:'lo'}[type]||'lo';
+  var pre={ok:'✓ ',warn:'⚠ ',error:'✗ ',head:'── ',info:'   '}[type]||'   ';
+  var ts=new Date().toLocaleTimeString('en',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  var d=document.createElement('div');d.className=cls;d.textContent='['+ts+'] '+pre+m;
+  b.appendChild(d);b.scrollTop=b.scrollHeight;
+}
+
+function get(url,ok,fail){fetch(url).then(function(r){return r.text();}).then(function(t){if(ok)ok(t);}).catch(function(){if(fail)fail();});}
+
+function buildTrim(){
+  var g=document.getElementById('trimGrid');g.innerHTML='';
+  for(var i=0;i<4;i++){
+    (function(ch){
+      var d=document.createElement('div');d.className='trim-item';
+      d.innerHTML='<div class="tlabel">CH'+ch+' — '+CH[ch]+'</div>'+
+        '<div class="trim-ctrl">'+
+          '<button class="big" data-ch="'+ch+'" data-d="-5">-5</button>'+
+          '<button data-ch="'+ch+'" data-d="-1">-</button>'+
+          '<div class="trim-val" id="tv'+ch+'">0°</div>'+
+          '<button data-ch="'+ch+'" data-d="+1">+</button>'+
+          '<button class="big" data-ch="'+ch+'" data-d="+5">+5</button>'+
+        '</div>';
+      g.appendChild(d);
+    })(i);
+  }
+  g.addEventListener('click',function(e){
+    var ch=parseInt(e.target.getAttribute('data-ch'));
+    var delta=parseInt(e.target.getAttribute('data-d'));
+    if(isNaN(ch)||isNaN(delta)) return;
+    adjTrim(ch,delta);
+  });
+}
+
+function adjTrim(ch,delta){
+  trims[ch]=Math.max(-45,Math.min(45,trims[ch]+delta));
+  refreshTrimUI();
+  get('/trim?ch='+ch+'&v='+trims[ch],
+    function(){log('ok','CH'+ch+' ('+CH[ch]+') trim = '+(trims[ch]>=0?'+':'')+trims[ch]+'°');},
+    function(){log('error','CH'+ch+' trim failed');});
+}
+
+function refreshTrimUI(){
+  for(var i=0;i<4;i++) document.getElementById('tv'+i).textContent=(trims[i]>=0?'+':'')+trims[i]+'°';
+  document.getElementById('codeBox').textContent='int trim[4] = {'+trims[0]+', '+trims[1]+', '+trims[2]+', '+trims[3]+'};';
+}
+
+function move(cmd){get('/move?cmd='+cmd,function(){log('info',cmd);},function(){log('error',cmd+' failed');});}
+document.getElementById('bFwd').addEventListener('click',function(){move('fwd');toast('Forward');});
+document.getElementById('bBwd').addEventListener('click',function(){move('bwd');toast('Backward');});
+document.getElementById('bLft').addEventListener('click',function(){move('left');toast('Turn left');});
+document.getElementById('bRgt').addEventListener('click',function(){move('right');toast('Turn right');});
+document.getElementById('bStop').addEventListener('click',function(){move('stand');toast('Stopped');});
+document.getElementById('bDance').addEventListener('click',function(){move('dance');toast('Auto Dance!');});
+var DANCE_NAMES=['Bounce','Moonwalk','Shimmy','Spin/Twist','Wave Bow'];
+[0,1,2,3,4].forEach(function(i){
+  document.getElementById('bD'+i).addEventListener('click',function(){
+    move('dance'+i);toast(DANCE_NAMES[i]+' !');
+  });
+});
+document.getElementById('bStand').addEventListener('click',function(){move('stand');toast('Standing');});
+document.getElementById('bRps').addEventListener('click',function(){
+  var btn=this; btn.disabled=true; btn.textContent='Playing\u2026';
+  toast('Rock Paper Scissors! 1\u20262\u20263\u2026');
+  get('/rps',
+    function(){ btn.disabled=false; btn.innerHTML='&#9994; Play Rock Paper Scissors'; toast('Done!'); },
+    function(){ btn.disabled=false; btn.innerHTML='&#9994; Play Rock Paper Scissors'; }
+  );
+});
+
+function bindSlider(id,valId,param){
+  var s=document.getElementById(id),v=document.getElementById(valId);
+  s.addEventListener('input',function(){v.textContent=s.value;});
+  s.addEventListener('change',function(){get('/param?'+param+'='+s.value,function(){log('info',param+'='+s.value);},null);toast(param+'='+s.value);});
+}
+bindSlider('sSpd','vSpd','speed');
+bindSlider('sHip','vHip','swing');
+bindSlider('sFt','vFt','tilt');
+
+document.getElementById('bSave').addEventListener('click',function(){
+  get('/save',function(){log('ok','Saved: '+document.getElementById('codeBox').textContent);toast('Saved to flash!');},function(){log('error','Save failed');});
+});
+document.getElementById('bReset').addEventListener('click',function(){
+  trims=[0,0,0,0];refreshTrimUI();
+  get('/resettrim',function(){log('warn','Trims reset to 0');toast('Trims reset');},null);
+});
+document.getElementById('bAssembly').addEventListener('click',function(){
+  get('/assembly',function(){
+    document.getElementById('assemblyStatus').textContent='Holding raw 90° — attach horns now.';
+    document.getElementById('assemblyStatus').style.color='#fbbf24';
+    log('warn','ASSEMBLY: raw 90° — no trim applied');toast('Holding raw 90°');
+  },function(){log('error','Assembly failed');});
+});
+document.getElementById('bAssemblyOff').addEventListener('click',function(){
+  get('/move?cmd=stand',function(){
+    document.getElementById('assemblyStatus').textContent='Released — normal stand with trim.';
+    document.getElementById('assemblyStatus').style.color='#64748b';
+    log('ok','Assembly off — standing with trim');toast('Normal stand');
+  },null);
+});
+document.getElementById('bCopy').addEventListener('click',function(){
+  var t=document.getElementById('codeBox').textContent;
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast('Copied!');});}
+  else{toast('Select text above and copy manually');}
+});
+document.getElementById('bClearLog').addEventListener('click',function(){document.getElementById('log').innerHTML='';});
+
+/* ── Expression switcher ── */
+(function(){
+  var btns=[];
+  for(var i=0;i<7;i++) btns.push(document.getElementById('xBtn'+i));
+  function setExpr(e){
+    curExpr=e;
+    btns.forEach(function(b,i){b.classList.toggle('active',i===e);});
+    document.getElementById('exprStatus').textContent='Active: '+EXPR_NAMES[e];
+    get('/eyes?m='+e,
+      function(){log('ok','Expression → '+EXPR_NAMES[e]);toast(EXPR_NAMES[e]+'!');},
+      function(){log('error','Expression change failed');});
+  }
+  btns.forEach(function(b,i){b.addEventListener('click',function(){setExpr(i);});});
+})();
+
+/* ── Screen ticker — shows typed text on the bottom bar, page by page ── */
+(function(){
+  var btn=document.getElementById('bTicker');
+  var inp=document.getElementById('tickerText');
+  var st=document.getElementById('tickerStatus');
+  function send(){
+    var t=inp.value.trim();
+    if(!t){inp.focus();return;}
+    btn.disabled=true;
+    get('/ticker?text='+encodeURIComponent(t),
+      function(){
+        var pages=Math.ceil(t.length/26);
+        st.textContent = pages>1 ? 'Showing "'+t+'" over '+pages+' pages.'
+                                 : 'Showing "'+t+'" for 5 s.';
+        st.style.color='#4ade80';
+        log('ok','Ticker: "'+t+'"');toast('On screen!');
+        btn.disabled=false;
+      },
+      function(){
+        st.textContent='Could not reach the robot.';
+        st.style.color='#f87171';
+        log('error','Ticker send failed');
+        btn.disabled=false;
+      });
+  }
+  btn.addEventListener('click',send);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')send();});
+})();
+
+fetch('/state').then(function(r){return r.json();}).then(function(d){
+  trims=d.trim;refreshTrimUI();
+  document.getElementById('sSpd').value=d.speed;document.getElementById('vSpd').textContent=d.speed;
+  document.getElementById('sHip').value=d.swing;document.getElementById('vHip').textContent=d.swing;
+  document.getElementById('sFt').value=d.tilt; document.getElementById('vFt').textContent=d.tilt;
+  if(d.eye!==undefined){
+    curExpr=d.eye;
+    for(var i=0;i<7;i++) document.getElementById('xBtn'+i).classList.toggle('active',i===d.eye);
+    document.getElementById('exprStatus').textContent='Active: '+EXPR_NAMES[Math.min(d.eye,6)];
+  }
+  if(d.mch!==undefined){
+    document.getElementById('mCh').value=d.mch;
+    document.getElementById('mFmt').value=d.mfmt;
+    document.getElementById('mFix').value=d.mfix;
+    document.getElementById('mSh').value=d.msh;
+  }
+  if(d.sam===0){
+    samOK=false;
+    document.getElementById('speakMode').value='beep';
+    log('warn','Voice TTS not compiled in — install ESP8266Audio + ESP8266SAM, set USE_SAM_TTS 1');
+  }
+  log('head','Connected — trims loaded from flash');
+  log('info','LH='+d.trim[0]+' LF='+d.trim[1]+' RH='+d.trim[2]+' RF='+d.trim[3]);
+}).catch(function(){log('warn','Could not load state');});
+
+/* ── Motor Control sliders ──────────────────────────────────── */
+(function(){
+  var NAMES = ['Left Hip','Left Foot','Right Hip','Right Foot'];
+  var sliders = [];   // slider elements, indexed by ch
+  var vals    = [];   // value-display spans
+
+  // Build 4 rows: label + slider (0–180, default 90) + live °
+  var container = document.getElementById('motorSliders');
+  for (var i = 0; i < 4; i++) {
+    (function(ch){
+      var row = document.createElement('div');
+      row.className = 'sl-row';
+      row.style.marginBottom = '10px';
+      row.innerHTML =
+        '<div class="sl-top">' +
+          'CH' + ch + ' — ' + NAMES[ch] +
+          ' <span id="mval' + ch + '" style="color:#7dd3fc;font-weight:700;min-width:38px;text-align:right">90°</span>' +
+        '</div>' +
+        '<input type="range" id="msl' + ch + '" min="0" max="180" value="90" step="1">';
+      container.appendChild(row);
+
+      var sl = document.getElementById('msl' + ch);
+      var vl = document.getElementById('mval' + ch);
+      sliders.push(sl);
+      vals.push(vl);
+
+      // Move motor in real-time while dragging.
+      // Throttled to one request per 50 ms so the ESP32 is never flooded.
+      var pending = null;
+      function sendPos(deg) {
+        fetch('/servopos?ch=' + ch + '&deg=' + deg)
+          .catch(function(){ log('error','servopos CH' + ch + ' failed'); });
+      }
+      sl.addEventListener('input', function(){
+        var deg = parseInt(sl.value);
+        vl.textContent = deg + '°';
+        if (pending === null) {
+          sendPos(deg);                        // fire immediately on first tick
+          pending = setTimeout(function(){
+            pending = null;
+            sendPos(parseInt(sl.value));       // send the latest value after gap
+          }, 50);
+        }
+      });
+      // Always send the final resting value on release (catches any missed tick)
+      sl.addEventListener('change', function(){
+        var deg = parseInt(sl.value);
+        vl.textContent = deg + '°';
+        sendPos(deg);
+        log('info', 'CH' + ch + ' (' + NAMES[ch] + ') → ' + deg + '°');
+      });
+    })(i);
+  }
+
+  // Load current positions from the robot on page open
+  fetch('/servopos')
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if(d.pos) d.pos.forEach(function(deg, ch){
+        sliders[ch].value   = deg;
+        vals[ch].textContent = deg + '°';
+      });
+    }).catch(function(){});
+
+  // Calibrate button — all 4 to 90° with trim
+  document.getElementById('bServoCal').addEventListener('click', function(){
+    var btn = this;
+    btn.disabled = true;
+    var st = document.getElementById('motorCalStatus');
+    st.textContent = 'Moving all to 90°…';
+    st.style.color = '#fbbf24';
+    fetch('/servocalibrate')
+      .then(function(r){ return r.text(); })
+      .then(function(){
+        // Reset all sliders to 90
+        sliders.forEach(function(sl, ch){
+          sl.value = 90;
+          vals[ch].textContent = '90°';
+        });
+        st.textContent = 'All motors at natural centre (90°)';
+        st.style.color = '#4ade80';
+        toast('Motors → 90°');
+        log('ok','All 4 servos calibrated to 90°');
+      })
+      .catch(function(e){
+        st.textContent = 'Calibrate failed';
+        st.style.color = '#f87171';
+        log('error','servocalibrate: ' + e.message);
+      })
+      .finally(function(){ btn.disabled = false; });
+  });
+})();
+
+buildTrim();
+
+/* ── Audio: Record ── */
+(function(){
+  var btn=document.getElementById('bRecord');
+  var st=document.getElementById('recStatus');
+  var busy=false;
+  document.getElementById('bPlayRobot').addEventListener('click',function(){
+    fetch('/play').then(function(r){
+      if(!r.ok) throw new Error(r.status===404?'record something first':'HTTP '+r.status);
+      log('ok','Replaying last recording on robot speaker');
+      toast('Playing on robot!');
+    }).catch(function(e){log('error','Robot play: '+e.message);toast('No recording yet');});
+  });
+  btn.addEventListener('click',function(){
+    if(busy) return;
+    var secs=document.getElementById('recSecs').value;
+    busy=true;
+    btn.classList.add('active');
+    btn.textContent='⏺ Recording…';
+    st.textContent='Capturing '+secs+' s of audio…';
+    st.style.color='#fbbf24';
+    fetch('/record?secs='+secs).then(function(r){
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      return r.blob();
+    }).then(function(blob){
+      if(blob.size<=44){throw new Error('empty WAV ('+blob.size+' bytes) — mic gave no data');}
+      var url=URL.createObjectURL(blob);
+      var player=document.getElementById('recPlayer');
+      if(player.src) URL.revokeObjectURL(player.src);
+      player.src=url;
+      player.style.display='block';
+      var a=document.createElement('a');
+      a.href=url; a.download='otto_recording.wav'; a.click();
+      st.textContent='Done ('+Math.round(blob.size/1024)+' KB) — press play below to listen.';
+      st.style.color='#4ade80';
+      log('ok','Recording done ('+blob.size+' bytes) — listen below or check download');
+      toast('Recording done!');
+    }).catch(function(e){
+      st.textContent='Record failed: '+e.message;
+      st.style.color='#f87171';
+      log('error','Record: '+e.message);
+    }).finally(function(){
+      busy=false;
+      btn.classList.remove('active');
+      btn.textContent='⏺ Record';
+    });
+  });
+})();
+
+/* ── Audio: Speak ── */
+var samOK=true;
+(function(){
+  var btn=document.getElementById('bSpeak');
+  var st=document.getElementById('speakStatus');
+  var inp=document.getElementById('speakText');
+  var vol=document.getElementById('sVol');
+  vol.addEventListener('input',function(){document.getElementById('vVol').textContent=vol.value;});
+  var vspd=document.getElementById('sVSpeed'),vpit=document.getElementById('sVPitch');
+  vspd.addEventListener('input',function(){document.getElementById('vVSpeed').textContent=vspd.value;});
+  vpit.addEventListener('input',function(){document.getElementById('vVPitch').textContent=vpit.value;});
+  btn.addEventListener('click',function(){
+    var txt=inp.value.trim();
+    if(!txt){inp.focus();return;}
+    var mode=document.getElementById('speakMode').value;
+    if(mode==='voice'&&!samOK){
+      st.textContent='Voice not available — firmware built without SAM (see log).';
+      st.style.color='#f87171';
+      log('error','Voice mode needs ESP8266Audio + ESP8266SAM libs and USE_SAM_TTS 1');
+      return;
+    }
+    btn.disabled=true;
+    st.textContent='Speaking…';
+    st.style.color='#7dd3fc';
+    var body=new URLSearchParams();
+    body.append('text',txt);
+    body.append('mode',mode);
+    body.append('voice',document.getElementById('speakVoice').value);
+    body.append('vol',vol.value);
+    /* only send speed/pitch when moved off default — keeps voice presets pure */
+    if(vspd.value!=='72')body.append('spd',vspd.value);
+    if(vpit.value!=='64')body.append('pit',vpit.value);
+    fetch('/speak',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()})
+      .then(function(r){
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        st.textContent='Done.';
+        st.style.color='#4ade80';
+        log('ok','Speak ('+mode+'): "'+txt+'"');
+        toast('Speaking!');
+      }).catch(function(e){
+        st.textContent='Speak failed: '+e.message;
+        st.style.color='#f87171';
+        log('error','Speak: '+e.message);
+      }).finally(function(){btn.disabled=false;});
+  });
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
+})();
+
+/* ── Mac TTS ── */
+(function(){
+  var btn=document.getElementById('bMacTts');
+  var inp=document.getElementById('macTtsText');
+  var st=document.getElementById('macTtsStatus');
+
+  btn.addEventListener('click',function(){
+    var txt=inp.value.trim();
+    if(!txt){inp.focus();return;}
+    var voice=document.getElementById('macVoice').value;
+    var rate=document.getElementById('macRate').value;
+
+    btn.disabled=true;
+    st.textContent='Synthesising on Mac…';
+    st.style.color='#7dd3fc';
+    log('head','Mac TTS: "'+txt+'" voice='+voice+' rate='+rate+' Hz');
+
+    /* Step 1: Mac synthesises via /mactts-mac endpoint (see mac_tts.sh)
+       The browser itself cannot run `say`, so we delegate synthesis to the Mac
+       by calling a tiny local helper server, OR the user can run mac_tts.sh
+       directly from Terminal.  The browser path works if mac_tts_server.py is
+       running on the Mac (see comments below).
+
+       Alternatively: this button can POST the text straight to the robot's
+       /mactts, and the ROBOT attempts to call the Mac helper over the local
+       network — but that requires the robot to make outbound HTTP calls.
+
+       Simplest approach that actually works in the browser without any extra
+       server: use the macOS `say` Web Speech API polyfill fallback — but that
+       is English-only and low quality.
+
+       BEST approach (used here): the browser builds a tiny fetch to the Mac's
+       local mac_tts_server.py (running on port 8756), which runs `say` + ffmpeg
+       and returns the WAV bytes, then the browser POSTs those bytes to the robot.
+    */
+
+    var MAC_TTS_PORT=8756;
+    var robotIP=window.location.hostname;
+
+    // Talk to the Mac helper server (mac_tts_server.py, port 8756 on localhost
+    // or the Mac's local IP).  If the user opened the page directly on the Mac
+    // browser, use 127.0.0.1; if they opened it from another device, the helper
+    // won't be reachable — they should use mac_tts.sh from Terminal instead.
+    var macHost='127.0.0.1';
+    var macUrl='http://'+macHost+':'+MAC_TTS_PORT+'/tts?voice='+encodeURIComponent(voice)
+              +'&rate='+rate+'&text='+encodeURIComponent(txt);
+
+    st.textContent='Connecting to Mac helper (port '+MAC_TTS_PORT+')…';
+
+    fetch(macUrl)
+      .then(function(r){
+        if(!r.ok) throw new Error('Mac helper HTTP '+r.status);
+        return r.blob();
+      })
+      .then(function(wavBlob){
+        st.textContent='Sending to robot ('+Math.round(wavBlob.size/1024)+' KB)…';
+        st.style.color='#7dd3fc';
+        log('ok','Mac TTS: WAV '+wavBlob.size+' bytes → robot');
+        /* Robot expects multipart/form-data (ESP32 WebServer upload API).
+           Using FormData makes the browser set the right Content-Type boundary. */
+        var fd=new FormData();
+        fd.append('f', new File([wavBlob],'tts.wav',{type:'audio/wav'}));
+        return fetch('http://'+robotIP+'/mactts',{method:'POST',body:fd});
+      })
+      .then(function(r){
+        if(!r.ok) throw new Error('Robot HTTP '+r.status);
+        st.textContent='Playing on robot! 🔊';
+        st.style.color='#4ade80';
+        log('ok','Mac TTS: playing on robot');
+        toast('Speaking!');
+      })
+      .catch(function(e){
+        var msg=e.message||String(e);
+        /* Helper not running — tell the user how to fix it */
+        if(msg.indexOf('Failed to fetch')>=0||msg.indexOf('ERR_CONNECTION_REFUSED')>=0){
+          st.innerHTML='<span style="color:#f87171">✗ Mac helper not running.</span>'
+            +'<br><span style="color:#fbbf24">Run this in Terminal:</span>'
+            +'<br><code style="color:#86efac;font-size:10px">python3 '+
+            'Bob_ep32Code/mac_tts_server.py</code>'
+            +'<br><span style="color:#64748b">Or use mac_tts.sh directly: '
+            +'<code style="color:#86efac">./Bob_ep32Code/mac_tts.sh "'+txt.replace(/"/g,"'")+'"</code></span>';
+        } else {
+          st.textContent='✗ '+msg;
+          st.style.color='#f87171';
+        }
+        log('error','Mac TTS: '+msg);
+      })
+      .finally(function(){btn.disabled=false;});
+  });
+
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter')btn.click();});
+})();
+
+/* ── Audio Diagnostics ── */
+(function(){
+  /* Speaker test tone */
+  document.getElementById('bTone').addEventListener('click',function(){
+    log('info','Playing 1 kHz test tone…');
+    get('/testtone?f=1000&ms=800',
+      function(){log('ok','Tone sent. Heard nothing? Check MAX98357A VIN/GND, speaker +/- and DIN=GPIO27');},
+      function(){log('error','Test tone request failed');});
+  });
+
+  /* Mic level meter — polls /miclevel while ON */
+  var meterOn=false,timer=null;
+  var btn=document.getElementById('bMicMeter');
+  var bar=document.getElementById('micBar');
+  var val=document.getElementById('micVal');
+  var verdict=document.getElementById('micVerdict');
+  var zeroCount=0;
+  var lastMicState=''; /* track state changes so we only log on transitions */
+
+  function poll(){
+    fetch('/miclevel').then(function(r){return r.json();}).then(function(d){
+      var pct=Math.min(100,Math.round(d.peak/32768*100*3)); /* x3 gain so speech is visible */
+      bar.style.width=pct+'%';
+      bar.style.background=(d.peak===0)?'#ef4444':(d.peak<80?'#fbbf24':'#22c55e');
+      val.textContent='peak='+d.peak+' rms='+d.rms+' n='+d.n;
+      var state,msg,lvl;
+      if(d.n===0){
+        state='no_data';
+        msg='MIC: i2s_read returned 0 samples — I2S driver not running (check wiring & reboot)';
+        lvl='error';
+        verdict.textContent='✗ i2s_read returned no data — I2S driver problem';
+        verdict.style.color='#f87171';
+      } else if(d.peak===0){
+        zeroCount++;
+        state='zero_'+(zeroCount>=5?'x5':'low');
+        msg=zeroCount===1
+          ? 'MIC: all-zero reads — mic may not be wired (DOUT→GPIO14, SEL→GND, 3.3V)'
+          : zeroCount===5
+            ? 'MIC: 5x all-zero reads — almost certainly a wiring fault (DOUT→GPIO14, SEL→GND)'
+            : null;
+        lvl='error';
+        verdict.textContent='✗ Dead silence — mic not wired: check DOUT→GPIO14, SEL→GND, 3V→3.3V, GND';
+        verdict.style.color='#f87171';
+      } else if(d.peak<80&&d.rms<30){
+        zeroCount=0;
+        state='weak';
+        msg='MIC: near-silence (peak='+d.peak+' rms='+d.rms+') — mic alive but very weak, talk close or check SEL→GND';
+        lvl='warn';
+        verdict.textContent='⚠ Near-silence — mic alive but very weak; talk close to it, check SEL→GND';
+        verdict.style.color='#fbbf24';
+      } else {
+        zeroCount=0;
+        state='ok';
+        msg='MIC: signal OK (peak='+d.peak+' rms='+d.rms+')';
+        lvl='ok';
+        verdict.textContent='✓ Mic signal OK — level responds to sound';
+        verdict.style.color='#4ade80';
+      }
+      /* log on every transition, plus force-log the persistent error states */
+      if(msg && (state!==lastMicState)){
+        log(lvl,msg);
+        lastMicState=state;
+      }
+    }).catch(function(e){
+      var errMsg='/miclevel request failed'+(e&&e.message?' ('+e.message+')':'');
+      verdict.textContent='✗ '+errMsg;
+      verdict.style.color='#f87171';
+      if(lastMicState!=='fetch_fail'){log('error','MIC: '+errMsg);lastMicState='fetch_fail';}
+    }).finally(function(){
+      if(meterOn)timer=setTimeout(poll,400);
+    });
+  }
+
+  btn.addEventListener('click',function(){
+    meterOn=!meterOn;
+    btn.textContent=meterOn?'🎙 Mic Meter: ON':'🎙 Mic Meter: OFF';
+    btn.style.background=meterOn?'#a16207':'#2d2008';
+    if(meterOn){zeroCount=0;lastMicState='';log('head','Mic meter started — talk or clap near the mic');poll();}
+    else{clearTimeout(timer);bar.style.width='0%';val.textContent='—';verdict.textContent='';lastMicState='';}
+  });
+
+  /* Mic config auto-scan */
+  document.getElementById('bMicScan').addEventListener('click',function(){
+    var out=document.getElementById('diagOut');
+    out.style.display='block';
+    out.textContent='Scanning 8 mic configs (~4 s)… KEEP TALKING / CLAPPING near the mic NOW!';
+    log('head','Mic auto-scan started — make noise near the mic!');
+    fetch('/micscan').then(function(r){return r.text();}).then(function(t){
+      out.textContent=t;
+      if(t.indexOf('SIGNAL')>=0){
+        log('ok','Scan found a working config — applied & saved. Turn on Mic Meter to confirm.');
+        toast('Mic config found!');
+        fetch('/state').then(function(r){return r.json();}).then(function(d){
+          document.getElementById('mCh').value=d.mch;
+          document.getElementById('mFmt').value=d.mfmt;
+          document.getElementById('mFix').value=d.mfix;
+          document.getElementById('mSh').value=d.msh;
+        }).catch(function(){});
+      }else{
+        log('error','Scan: all 8 configs dead — 100% hardware, see checklist in report');
+      }
+    }).catch(function(e){
+      out.textContent='Scan failed: '+e.message;
+      log('error','Mic scan: '+e.message);
+    });
+  });
+
+  /* Manual mic config apply */
+  document.getElementById('bMicApply').addEventListener('click',function(){
+    var q='/micconfig?ch='+document.getElementById('mCh').value+
+      '&fmt='+document.getElementById('mFmt').value+
+      '&fix='+document.getElementById('mFix').value+
+      '&shift='+document.getElementById('mSh').value;
+    get(q,
+      function(){log('ok','Mic config applied & saved — turn on Mic Meter to test');toast('Mic config applied');},
+      function(){log('error','Mic config apply failed');});
+  });
+
+  /* Full diagnostic report */
+  document.getElementById('bDiag').addEventListener('click',function(){
+    var out=document.getElementById('diagOut');
+    out.style.display='block';
+    out.textContent='Running… (mic sample + 1 s speaker tone, ~2 s)';
+    log('head','Running full audio diagnostic…');
+    fetch('/diag').then(function(r){return r.text();}).then(function(t){
+      out.textContent=t;
+      var micOK=t.indexOf('SIGNAL PRESENT')>=0;
+      var spkOK=t.indexOf('i2s_write OK')>=0;
+      log(micOK?'ok':'error','Diag: mic '+(micOK?'signal present':'NO signal — see report'));
+      log(spkOK?'ok':'error','Diag: speaker i2s_write '+(spkOK?'OK — if silent it’s wiring/power':'FAILED'));
+    }).catch(function(e){
+      out.textContent='Diagnostic failed: '+e.message;
+      log('error','Diag: '+e.message);
+    });
+  });
+})();
+
+/* ── Sound Clips: long recording, browser-side MP3 decode, flash storage ── */
+(function(){
+  var listEl=document.getElementById('clipList');
+  var upSt=document.getElementById('clipUpStatus');
+  var recSt=document.getElementById('recFileStatus');
+
+  function fmtKB(b){return b<1024?b+' B':(b/1024).toFixed(b<102400?1:0)+' KB';}
+  function fmtSecs(bytes,rate){return ((bytes-44)/2/rate).toFixed(1)+' s';}
+
+  function refresh(){
+    fetch('/files').then(function(r){return r.json();}).then(function(d){
+      if(!d.ok){listEl.innerHTML='<span style="color:#f87171">Filesystem not mounted — in Arduino IDE pick Tools &gt; Partition Scheme with SPIFFS, then re-upload.</span>';return;}
+      var pct=d.total?Math.round(d.used/d.total*100):0;
+      document.getElementById('fsBar').style.width=pct+'%';
+      document.getElementById('fsBar').style.background=pct>90?'#ef4444':(pct>70?'#fbbf24':'#22c55e');
+      document.getElementById('fsVal').textContent=fmtKB(d.used)+' / '+fmtKB(d.total)+' — up to '+d.maxsecs+' s free';
+      document.getElementById('recCap').textContent=d.maxsecs+' seconds';
+      document.getElementById('recFileSecs').max=Math.max(1,d.maxsecs);
+      if(!d.files.length){listEl.innerHTML='<span style="color:#64748b">No clips yet — record one or upload a song above.</span>';return;}
+      listEl.innerHTML='';
+      d.files.forEach(function(f){
+        var row=document.createElement('div');
+        row.style.cssText='display:flex;align-items:center;gap:6px;padding:6px 0;border-bottom:1px solid #1e293b';
+        var nm=document.createElement('div');
+        nm.style.cssText='flex:1;color:#e2e8f0;word-break:break-all';
+        nm.innerHTML=f.n+' <span style="color:#64748b">('+fmtKB(f.s)+')</span>';
+        row.appendChild(nm);
+        function mk(label,bg,col,fn){
+          var b=document.createElement('button');
+          b.textContent=label;
+          b.style.cssText='padding:6px 9px;border-radius:6px;border:none;font-size:11px;font-weight:700;cursor:pointer;background:'+bg+';color:'+col;
+          b.addEventListener('click',fn);
+          row.appendChild(b);
+        }
+        mk('▶ Robot','#0f766e','#99f6e4',function(){
+          fetch('/playfile?name='+encodeURIComponent(f.n)).then(function(r){
+            if(!r.ok)throw new Error('HTTP '+r.status);
+            log('ok','Playing '+f.n+' on robot');toast('Playing '+f.n);
+          }).catch(function(e){log('error','Play '+f.n+': '+e.message);});
+        });
+        mk('⤓','#1e3a5f','#7dd3fc',function(){
+          var a=document.createElement('a');
+          a.href='/clip?name='+encodeURIComponent(f.n);a.download=f.n;a.click();
+        });
+        mk('✕','#450a0a','#fca5a5',function(){
+          fetch('/delfile?name='+encodeURIComponent(f.n)).then(function(r){
+            if(!r.ok)throw new Error('HTTP '+r.status);
+            log('warn','Deleted '+f.n);toast('Deleted');refresh();
+          }).catch(function(e){log('error','Delete: '+e.message);});
+        });
+        listEl.appendChild(row);
+      });
+    }).catch(function(){listEl.textContent='Could not read clip list.';});
+  }
+  document.getElementById('bClipRefresh').addEventListener('click',refresh);
+
+  /* Preset length buttons just fill the number box */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-secs]'),function(b){
+    b.addEventListener('click',function(){
+      document.getElementById('recFileSecs').value=b.getAttribute('data-secs');
+    });
+  });
+
+  /* Long record straight to flash */
+  document.getElementById('bRecFile').addEventListener('click',function(){
+    var secs=parseInt(document.getElementById('recFileSecs').value)||5;
+    var name=document.getElementById('recFileName').value.trim()||'rec.wav';
+    var btn=this;
+    btn.disabled=true;
+    recSt.textContent='Recording '+secs+' s to flash… talk now!';
+    recSt.style.color='#fbbf24';
+    log('head','Recording '+secs+' s to flash as '+name);
+    fetch('/recfile?secs='+secs+'&name='+encodeURIComponent(name)).then(function(r){
+      return r.text().then(function(t){if(!r.ok)throw new Error(t||('HTTP '+r.status));return t;});
+    }).then(function(t){
+      recSt.textContent='Saved as '+t+' — play it on the robot below.';
+      recSt.style.color='#4ade80';
+      log('ok','Recorded to flash: '+t);toast('Recorded!');refresh();
+    }).catch(function(e){
+      recSt.textContent='Record failed: '+e.message;
+      recSt.style.color='#f87171';
+      log('error','Flash record: '+e.message);
+    }).finally(function(){btn.disabled=false;});
+  });
+
+  /* Build a 16-bit mono WAV Blob from Float32 samples */
+  function makeWav(samples,rate){
+    var n=samples.length, buf=new ArrayBuffer(44+n*2), v=new DataView(buf);
+    function str(o,s){for(var i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i));}
+    str(0,'RIFF'); v.setUint32(4,36+n*2,true); str(8,'WAVE');
+    str(12,'fmt '); v.setUint32(16,16,true); v.setUint16(20,1,true);
+    v.setUint16(22,1,true); v.setUint32(24,rate,true); v.setUint32(28,rate*2,true);
+    v.setUint16(32,2,true); v.setUint16(34,16,true);
+    str(36,'data'); v.setUint32(40,n*2,true);
+    for(var i=0;i<n;i++){
+      var s=Math.max(-1,Math.min(1,samples[i]));
+      v.setInt16(44+i*2, s<0?s*0x8000:s*0x7FFF, true);
+    }
+    return new Blob([buf],{type:'audio/wav'});
+  }
+
+  /* Decode ANY audio file in the browser -> 16-bit mono WAV Blob.
+     This is where MP3 decoding happens; the robot only ever gets plain PCM. */
+  function convertPicked(){
+    var inp=document.getElementById('clipFile');
+    var file=inp.files&&inp.files[0];
+    if(!file) return Promise.reject(new Error('pick an audio file first'));
+    var rate=parseInt(document.getElementById('clipRate').value);
+    upSt.textContent='Decoding '+file.name+'…';
+    upSt.style.color='#7dd3fc';
+    log('head','Converting '+file.name+' at '+rate+' Hz');
+    return file.arrayBuffer().then(function(ab){
+      var AC=window.AudioContext||window.webkitAudioContext;
+      return new AC().decodeAudioData(ab);
+    }).then(function(decoded){
+      upSt.textContent='Resampling '+decoded.duration.toFixed(1)+' s to '+rate+' Hz…';
+      var OAC=window.OfflineAudioContext||window.webkitOfflineAudioContext;
+      var off=new OAC(1,Math.max(1,Math.ceil(decoded.duration*rate)),rate);
+      var src=off.createBufferSource();
+      src.buffer=decoded; src.connect(off.destination); src.start();
+      return off.startRendering();
+    }).then(function(rendered){
+      var base=file.name.replace(/\.[^.]+$/,'').replace(/[^A-Za-z0-9_-]/g,'_').slice(0,30);
+      return {blob:makeWav(rendered.getChannelData(0),rate),
+              name:(base||'clip')+'.wav',
+              secs:rendered.length/rate};
+    });
+  }
+
+  /* Play Now — streams to the speaker, nothing stored, any length */
+  document.getElementById('bClipStream').addEventListener('click',function(){
+    var btn=this; btn.disabled=true;
+    convertPicked().then(function(c){
+      upSt.textContent='Streaming '+c.secs.toFixed(1)+' s to the speaker ('+fmtKB(c.blob.size)+')…';
+      var fd=new FormData(); fd.append('f',c.blob,c.name);
+      return fetch('/streamplay',{method:'POST',body:fd}).then(function(r){
+        if(!r.ok)throw new Error('HTTP '+r.status);
+        return c;
+      });
+    }).then(function(c){
+      upSt.textContent='Finished playing '+c.name+' (nothing stored).';
+      upSt.style.color='#4ade80';
+      log('ok','Streamed '+c.name+' to speaker');toast('Playing!');
+    }).catch(function(e){
+      upSt.textContent='Failed: '+e.message;
+      upSt.style.color='#f87171';
+      log('error','Stream play: '+e.message);
+    }).finally(function(){btn.disabled=false;});
+  });
+
+  /* Save to Robot — stored in flash, plays later without the phone */
+  document.getElementById('bClipUpload').addEventListener('click',function(){
+    var btn=this; btn.disabled=true;
+    convertPicked().then(function(c){
+      upSt.textContent='Uploading '+c.name+' ('+fmtKB(c.blob.size)+')…';
+      var fd=new FormData(); fd.append('f',c.blob,c.name);
+      return fetch('/upload',{method:'POST',body:fd}).then(function(r){
+        return r.text().then(function(t){
+          if(!r.ok)throw new Error(t||('HTTP '+r.status));
+          return c.name;
+        });
+      });
+    }).then(function(name){
+      upSt.textContent='Saved '+name+' — tap ▶ Robot below to play it.';
+      upSt.style.color='#4ade80';
+      log('ok','Saved clip '+name);toast('Clip saved!');refresh();
+    }).catch(function(e){
+      upSt.textContent='Failed: '+e.message+' (browser could not decode, or flash is full)';
+      upSt.style.color='#f87171';
+      log('error','Clip save: '+e.message);
+    }).finally(function(){btn.disabled=false;});
+  });
+
+  refresh();
+})();
+
+/* ── Universal screen recovery button (header) ── */
+(function(){
+  var b=document.getElementById('bRecover');
+  if(!b)return;
+  b.addEventListener('click',function(){
+    b.disabled=true; var old=b.innerHTML; b.innerHTML='Recovering…';
+    fetch('/recover').then(function(r){return r.text();}).then(function(t){
+      toast('Screen recovered → Normal face');
+      if(window.log)log('ok','Recover: '+t);
+    }).catch(function(e){
+      toast('Recover failed — if the robot is hung, power-cycle it');
+      if(window.log)log('error','Recover failed: '+(e&&e.message?e.message:e));
+    }).finally(function(){b.disabled=false;b.innerHTML=old;});
+  });
+})();
+
+/* ── Device Log (survives restarts) ── */
+(function(){
+  var out=document.getElementById('devLog');
+  var autoBtn=document.getElementById('bLogAuto');
+  var autoOn=false,timer=null;
+  function refresh(){
+    fetch('/logs').then(function(r){return r.text();}).then(function(t){
+      out.textContent=t;
+      out.scrollTop=out.scrollHeight;
+    }).catch(function(){
+      out.textContent='Could not reach robot — if it just restarted, reconnect to the OttoRobot WiFi and tap Refresh again. The log is still on the device.';
+    }).finally(function(){
+      if(autoOn)timer=setTimeout(refresh,3000);
+    });
+  }
+  document.getElementById('bLogRefresh').addEventListener('click',refresh);
+  autoBtn.addEventListener('click',function(){
+    autoOn=!autoOn;
+    autoBtn.textContent='Auto: '+(autoOn?'ON':'OFF');
+    autoBtn.style.background=autoOn?'#a16207':'#2d2008';
+    if(autoOn)refresh();else clearTimeout(timer);
+  });
+  document.getElementById('bLogCopy').addEventListener('click',function(){
+    var t=out.textContent;
+    /* page is plain http so navigator.clipboard is unavailable — use textarea trick */
+    var ta=document.createElement('textarea');
+    ta.value=t;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.focus();ta.select();
+    var ok=false;
+    try{ok=document.execCommand('copy');}catch(e){}
+    document.body.removeChild(ta);
+    if(ok){toast('Log copied — paste it to Claude!');log('ok','Device log copied to clipboard');}
+    else{toast('Copy blocked — long-press the log text and copy manually');}
+  });
+  document.getElementById('bLogClear').addEventListener('click',function(){
+    fetch('/logs?clear=1').then(function(){out.textContent='(cleared)';toast('Device log cleared');})
+      .catch(function(){toast('Clear failed');});
+  });
+  refresh();
+})();
+/* ── IMU: GY-6500 3D cube + calibration + raw values + lift banner ──
+   Future hook: when d.lift===1, the laptop can poll /imu and play a
+   "drop me!" audio — the field is already in the JSON response. */
+(function(){
+  var cube      = document.getElementById('imuCube');
+  var lift      = document.getElementById('imuLiftBanner');
+  var avals     = document.getElementById('imuAVals');
+  var gvals     = document.getElementById('imuGVals');
+  var status    = document.getElementById('imuStatus');
+  var offline   = document.getElementById('imuOffline');
+  var axFill    = document.getElementById('imuAxFill');
+  var ayFill    = document.getElementById('imuAyFill');
+  var azFill    = document.getElementById('imuAzFill');
+  var gxFill    = document.getElementById('imuGxFill');
+  var gyFill    = document.getElementById('imuGyFill');
+  var gzFill    = document.getElementById('imuGzFill');
+  var pitchEl   = document.getElementById('imuPitch');
+  var rollEl    = document.getElementById('imuRoll');
+  var deltaBar  = document.getElementById('imuDeltaBar');
+  var deltaVal  = document.getElementById('imuDeltaVal');
+  var calBadge  = document.getElementById('imuCalBadge');
+  var calStatus = document.getElementById('imuCalStatus');
+  var calDetail = document.getElementById('imuCalDetail');
+  var thrSlider = document.getElementById('sImuThresh');
+  var thrVal    = document.getElementById('vImuThresh');
+  var liftBtn    = document.getElementById('bLiftToggle');
+  var liftBusy   = false;
+  var helpMeBtn  = document.getElementById('bHelpMeToggle');
+  var helpMeBusy = false;
+  var paused    = false;
+  var timer     = null;
+  var lastThresh= 4000;
+
+  /* Map a value to a 0-100% bar width (50% = zero) over ±span full-scale.
+     Zero-referenced axes swing far less than raw ones, so they get a tighter
+     span (±1 g / ±250 dps) — otherwise every bar sits pinned at dead centre
+     and the panel looks broken. */
+  function toBar(v, span){
+    var pct = 50 + (v / span) * 50;
+    return Math.max(0, Math.min(100, Math.round(pct)));
+  }
+
+  /* The robot now sends pitch/roll already expressed as a deviation from the
+     calibrated rest pose, so there is no orientation maths left to do here.
+     That is deliberate: the firmware knows the calibration baseline, the page
+     does not, and duplicating the formula in two places is how they drift
+     apart. Before the first calibration the values are absolute. */
+
+  /* Update calibration badge appearance */
+  function updateCalBadge(calOk){
+    if(calOk){
+      calBadge.textContent='CALIBRATED';
+      calBadge.style.background='#14532d';
+      calBadge.style.color='#bbf7d0';
+    } else {
+      calBadge.textContent='NOT CAL';
+      calBadge.style.background='#1e293b';
+      calBadge.style.color='#475569';
+    }
+  }
+
+  /* Paint the pick-up-reaction master switch */
+  function renderLift(on){
+    liftBtn.textContent      = on ? 'ON' : 'OFF';
+    liftBtn.style.background = on ? '#166534' : '#334155';
+    liftBtn.style.color      = on ? '#bbf7d0' : '#cbd5e1';
+  }
+
+  function renderHelpMe(on){
+    helpMeBtn.textContent      = on ? 'ON' : 'OFF';
+    helpMeBtn.style.background = on ? '#166534' : '#334155';
+    helpMeBtn.style.color      = on ? '#bbf7d0' : '#cbd5e1';
+  }
+
+  function poll(){
+    if(paused) return;
+    fetch('/imu').then(function(r){return r.json();}).then(function(d){
+      /* ── Offline guard ────────────────────────────────────────────────
+         The IMU dropping off the bus dims THIS panel and nothing else. The
+         robot keeps polling for it in the background, so we keep polling too
+         and the panel lights back up on its own when the chip returns — no
+         page reload, no restart. */
+      if(!d.ok){
+        offline.style.display='block';
+        cube.style.opacity='0.25';
+        updateCalBadge(false);
+        var secs = Math.round((d.lastOkMs||0)/1000);
+        status.textContent = 'IMU offline — retrying'
+          + (secs ? ' (last seen '+secs+'s ago)' : '')
+          + (d.reconnects ? ' · '+d.reconnects+' reconnect(s)' : '');
+        status.style.color='#f87171';
+        lift.style.display='none';
+        timer=setTimeout(poll,1000);
+        return;
+      }
+      offline.style.display='none';
+      cube.style.opacity='1';
+
+      /* Calibration badge sync */
+      updateCalBadge(d.calOk);
+
+      /* Keep the reaction switch in sync (unless the user is mid-toggle) */
+      if(!liftBusy && typeof d.liftEn!=='undefined') renderLift(!!d.liftEn);
+
+      /* Sync threshold slider to robot's current value on first read */
+      if(d.thresh && d.thresh!==lastThresh){
+        lastThresh=d.thresh;
+        thrSlider.value=d.thresh;
+        thrVal.textContent=d.thresh;
+      }
+
+      /* Cube rotation. pitch/roll arrive zero-referenced, so straight after a
+         calibration the cube sits square on its neutral face however the IMU
+         is physically mounted, and any rotation you see from then on is real
+         movement rather than mounting offset. */
+      var pitch = (typeof d.pitch === 'number') ? d.pitch : 0;
+      var roll  = (typeof d.roll  === 'number') ? d.roll  : 0;
+      cube.style.transform='rotateX('+(-pitch).toFixed(1)+'deg) rotateY('+roll.toFixed(1)+'deg)';
+      pitchEl.textContent=pitch.toFixed(1)+'°';
+      rollEl.textContent =roll.toFixed(1)+'°';
+
+      /* Delta bar — fills proportionally vs threshold; turns red when near/over */
+      var thresh = d.thresh || 4000;
+      var delta  = d.delta  || 0;
+      var pct    = Math.min(100, Math.round(delta / thresh * 100));
+      deltaBar.style.width=pct+'%';
+      deltaBar.style.background = pct>85 ? '#ef4444' : (pct>55 ? '#fbbf24' : '#22c55e');
+      deltaVal.textContent='delta='+delta+' / thresh='+thresh;
+
+      /* Accel + gyro bars, zero-referenced.
+         Once calibrated these are (raw − baseline), so a robot standing still
+         reads 0 on every axis no matter how the IMU is mounted — that is the
+         whole point of pressing Calibrate. The raw counts are still in the
+         JSON (d.ax … d.gz) and are appended below for wiring diagnosis. */
+      var cal = !!d.calOk;
+      var ax=d.rax, ay=d.ray, az=d.raz, gx=d.rgx, gy=d.rgy, gz=d.rgz;
+
+      axFill.style.width=toBar(ax, cal?16384:32768)+'%';
+      ayFill.style.width=toBar(ay, cal?16384:32768)+'%';
+      azFill.style.width=toBar(az, cal?16384:32768)+'%';
+      avals.textContent='ax='+ax+' ay='+ay+' az='+az
+                      + (cal ? '  (raw '+d.ax+','+d.ay+','+d.az+')' : '  (uncalibrated — raw)');
+
+      gxFill.style.width=toBar(gx, cal?8192:32768)+'%';
+      gyFill.style.width=toBar(gy, cal?8192:32768)+'%';
+      gzFill.style.width=toBar(gz, cal?8192:32768)+'%';
+      gvals.textContent='gx='+gx+' gy='+gy+' gz='+gz
+                      + (cal ? '  (raw '+d.gx+','+d.gy+','+d.gz+')' : '  (uncalibrated — raw)');
+
+      /* Lift banner + reaction phase.
+         react: 0=idle 1=flipping 2=settling 3=recalibrating. Saying which
+         phase it is in matters, because during 1 and 2 the robot is ignoring
+         the IMU on purpose and the raw numbers thrash around — without this
+         the panel just looks broken. */
+      if(d.lift || d.react){
+        lift.style.display='block';
+        status.textContent =
+            d.react===1 ? 'SCARED — flipping feet'
+          : d.react===2 ? 'Settling…'
+          : d.react===3 ? 'Re-learning resting pose…'
+          :               'LIFTED';
+        status.style.color='#ef4444';
+        /* ── Future hook for laptop audio ──────────────────────────────
+           To play "drop me!" when the robot is lifted, the Mac TTS server
+           or a Node.js poller can hit GET /imu and check d.lift===1,
+           then call: new Audio('drop_me.mp3').play()
+           That wiring lives in mac_tts_server.py — groundwork is here. */
+      } else {
+        lift.style.display='none';
+        status.textContent = d.calOk ? 'On ground — polling 5 Hz' : 'On ground (uncalibrated)';
+        status.style.color = d.calOk ? '#4ade80' : '#fbbf24';
+      }
+      timer=setTimeout(poll,200);  /* 5 Hz */
+    }).catch(function(){
+      status.textContent='IMU fetch failed';
+      status.style.color='#f87171';
+      timer=setTimeout(poll,1000);
+    });
+  }
+
+  /* Threshold slider — live preview; saved on next Calibrate */
+  thrSlider.addEventListener('input',function(){
+    thrVal.textContent=thrSlider.value;
+  });
+
+  /* Calibrate button — posts to /imucal with current threshold */
+  document.getElementById('bImuCal').addEventListener('click',function(){
+    var btn=this;
+    var thresh=parseInt(thrSlider.value)||4000;
+    btn.disabled=true;
+    calStatus.textContent='Sampling ~3 s … keep robot still!';
+    calStatus.style.color='#fbbf24';
+    calDetail.style.display='none';
+    fetch('/imucal?thresh='+thresh)
+      .then(function(r){
+        if(!r.ok) return r.text().then(function(t){throw new Error(t||'HTTP '+r.status);});
+        return r.json();
+      })
+      .then(function(d){
+        updateCalBadge(true);
+        calStatus.textContent='Calibrated — all axes zeroed ('+d.n+' samples)';
+        calStatus.style.color='#4ade80';
+        calDetail.style.display='block';
+        /* These are the BASELINE values that were just subtracted away. The
+           live bars above should now read ~0 and the cube should sit square. */
+        calDetail.textContent='baseline a='+d.ax+','+d.ay+','+d.az
+                            +' g='+d.gx+','+d.gy+','+d.gz
+                            +' restMag='+d.restMag+' thresh='+d.delta;
+        lastThresh=d.delta;
+        thrSlider.value=d.delta;
+        thrVal.textContent=d.delta;
+        log('ok','IMU calibrated: restMag='+d.restMag+' thresh='+d.delta);
+        toast('IMU calibrated!');
+      })
+      .catch(function(e){
+        calStatus.textContent='Calibration failed: '+e.message;
+        calStatus.style.color='#f87171';
+        log('error','IMU cal: '+e.message);
+      })
+      .finally(function(){btn.disabled=false;});
+  });
+
+  /* Pick-up reaction master switch — turning ON auto-calibrates (/liftdetect) */
+  liftBtn.addEventListener('click',function(){
+    if(liftBusy) return;
+    var turnOn = liftBtn.textContent.indexOf('ON') < 0;   /* currently OFF → turn on */
+    liftBusy = true; liftBtn.disabled = true;
+    var url = '/liftdetect?on=' + (turnOn ? 1 : 0);
+    if(turnOn){
+      url += '&thresh=' + (parseInt(thrSlider.value) || 4000);
+      calStatus.textContent = 'Enabling — calibrating ~3 s, keep robot still!';
+      calStatus.style.color = '#fbbf24';
+    }
+    fetch(url).then(function(r){return r.json();}).then(function(d){
+      renderLift(!!d.enabled);
+      updateCalBadge(!!d.calOk);
+      if(!turnOn){
+        calStatus.textContent = 'Pick-up reaction OFF'; calStatus.style.color = '#94a3b8';
+        toast('Reaction OFF');
+      } else if(d.calOk){
+        calStatus.textContent = 'Reaction ON — armed (' + d.n + ' samples)';
+        calStatus.style.color = '#4ade80'; toast('Reaction ON');
+      } else {
+        calStatus.textContent = 'Reaction ON, but calibration failed' + (d.imu ? '' : ' (IMU offline)');
+        calStatus.style.color = '#f87171';
+      }
+      log('ok','liftdetect on=' + (d.enabled?1:0) + ' calOk=' + (d.calOk?1:0));
+    }).catch(function(e){
+      calStatus.textContent = 'Toggle failed: ' + e.message; calStatus.style.color = '#f87171';
+    }).finally(function(){ liftBusy = false; liftBtn.disabled = false; });
+  });
+
+  /* Initial switch state — works even if the IMU is offline at boot */
+  fetch('/liftdetect').then(function(r){return r.json();})
+    .then(function(d){renderLift(!!d.enabled);}).catch(function(){});
+
+  /* Help-me sound toggle — calls /helpme?on=0|1 */
+  helpMeBtn.addEventListener('click',function(){
+    if(helpMeBusy) return;
+    var turnOn = helpMeBtn.textContent.indexOf('ON') < 0;
+    helpMeBusy = true; helpMeBtn.disabled = true;
+    fetch('/helpme?on=' + (turnOn ? 1 : 0))
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        renderHelpMe(!!d.enabled);
+        toast('Help me sound ' + (d.enabled ? 'ON' : 'OFF'));
+      })
+      .catch(function(e){ log('error','helpme: ' + e.message); })
+      .finally(function(){ helpMeBusy = false; helpMeBtn.disabled = false; });
+  });
+  /* Load current saved state on page open */
+  fetch('/helpme').then(function(r){ return r.json(); })
+    .then(function(d){ renderHelpMe(!!d.enabled); }).catch(function(){});
+
+  /* Pause / resume button */
+  document.getElementById('bImuToggle').addEventListener('click',function(){
+    paused=!paused;
+    this.textContent=paused?'\u25B6 Resume':'\u2016 Pause';
+    if(!paused) poll();
+    else clearTimeout(timer);
+  });
+
+  /* Start — check /state first so we know if IMU is wired */
+  fetch('/state').then(function(r){return r.json();}).then(function(d){
+    if(d.imu===0){
+      offline.style.display='block';
+      cube.style.opacity='0.25';
+      status.textContent='IMU not detected at boot';
+      status.style.color='#f87171';
+    } else {
+      poll();
+    }
+  }).catch(function(){poll();});
+})();
+
+/* ── WiFi Settings card ─────────────────────────────────────── */
+(function(){
+  var ssidInp  = document.getElementById('wifiSsid');
+  var passInp  = document.getElementById('wifiPass');
+  var saveBtn  = document.getElementById('bWifiSave');
+  var statusEl = document.getElementById('wifiSaveStatus');
+  var barEl    = document.getElementById('wifiStatusBar');
+  var hdrIp    = document.getElementById('hdrIp');
+
+  function renderStatus(d) {
+    var html = '<span style="color:#4ade80">&#9679; AP: </span>'
+             + '<strong style="color:#e2e8f0">' + (d.ap||'Bob_robo') + '</strong>'
+             + ' &nbsp;·&nbsp; <span style="color:#86efac">' + (d.apIp||'192.168.4.1') + '</span>';
+    if(d.homeOk){
+      html += '&ensp;<span style="color:#4ade80">&#9679; Home: </span>'
+            + '<strong style="color:#e2e8f0">' + d.homeSsid + '</strong>'
+            + ' &nbsp;·&nbsp; <span style="color:#7dd3fc">' + d.homeIp + '</span>';
+      hdrIp.textContent = d.homeIp;
+      hdrIp.style.color = '#4ade80';
+      ssidInp.value = d.homeSsid;
+    } else if(d.homeSsid && d.homeSsid.length){
+      html += '&ensp;<span style="color:#fbbf24">&#9679; Home: </span>'
+            + '<strong style="color:#fbbf24">' + d.homeSsid + '</strong>'
+            + ' <span style="color:#f87171">(not connected)</span>';
+      ssidInp.value = d.homeSsid;
+    } else {
+      html += '&ensp;<span style="color:#475569">&#9675; No home WiFi saved</span>';
+    }
+    barEl.innerHTML = html;
+  }
+
+  /* Load current status on page open */
+  fetch('/wifistatus').then(function(r){return r.json();})
+    .then(renderStatus).catch(function(){
+      barEl.textContent = 'Could not reach robot';
+    });
+
+  /* Save & Connect */
+  saveBtn.addEventListener('click', function(){
+    var ssid = ssidInp.value.trim();
+    var pass = passInp.value;
+    if(!ssid){ ssidInp.focus(); toast('Enter a WiFi name'); return; }
+    saveBtn.disabled = true;
+    statusEl.textContent = 'Saving and connecting… (up to 15 s)';
+    statusEl.style.color = '#fbbf24';
+
+    var body = new URLSearchParams();
+    body.append('ssid', ssid);
+    body.append('pass', pass);
+    fetch('/wifisave', {method:'POST', body:body})
+      .then(function(r){ return r.text(); })
+      .then(function(t){
+        statusEl.textContent = t;
+        statusEl.style.color = '#4ade80';
+        toast('Saved!');
+        /* Poll for the result — the robot reconnects after replying */
+        setTimeout(function(){
+          fetch('/wifistatus').then(function(r){return r.json();})
+            .then(function(d){
+              renderStatus(d);
+              if(d.homeOk){
+                statusEl.textContent = 'Connected! Home IP: ' + d.homeIp;
+                statusEl.style.color = '#4ade80';
+                passInp.value = '';
+                toast('Connected to ' + d.homeSsid);
+                log('ok','WiFi: joined ' + d.homeSsid + ' → ' + d.homeIp);
+              } else {
+                statusEl.textContent = 'Join failed — check SSID / password (AP still up)';
+                statusEl.style.color = '#f87171';
+                log('error','WiFi join failed for: ' + ssid);
+              }
+            }).catch(function(){
+              statusEl.textContent = 'Connected (AP may have changed IP)';
+              statusEl.style.color = '#fbbf24';
+            });
+        }, 3000);  /* wait 3 s for the robot to finish connecting */
+      })
+      .catch(function(e){
+        statusEl.textContent = 'Request failed: ' + e.message;
+        statusEl.style.color = '#f87171';
+        log('error','wifisave: ' + e.message);
+      })
+      .finally(function(){ saveBtn.disabled = false; });
+  });
+
+  /* Allow Enter key in SSID and password fields */
+  [ssidInp, passInp].forEach(function(el){
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter') saveBtn.click(); });
+  });
+})();
+
+/* ── Hardware status + camera ──────────────────────────────────
+   /hw lists each part: s = 0 starting, 1 ok, 2 failed, 3 can't check.
+   Polled fast while the robot is still starting, then every 10 s. */
+(function(){
+  var COL=['#eab308','#22c55e','#ef4444','#64748b'];
+  var LBL=['starting…','OK','NOT FOUND','no feedback'];
+  var list=document.getElementById('hwList'), stepEl=document.getElementById('hwStep');
+  var camState=document.getElementById('camState'), camMsg=document.getElementById('camMsg');
+  var camImg=document.getElementById('camImg'), bCam=document.getElementById('bCam');
+  var camS=0, camOn=false;
+  function esc(t){return String(t).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function camUI(){
+    camState.style.color=COL[camS];
+    camState.textContent= camS===1?'ready':camS===2?'NOT FOUND':camS===0?'starting…':'?';
+    bCam.disabled=(camS!==1);
+    bCam.style.opacity=bCam.disabled?.5:1;
+    document.getElementById('bSnap').disabled=bCam.disabled;
+    if(camS===2){camMsg.style.color='#ef4444';camMsg.textContent='Camera not detected — check the ribbon cable';}
+    else if(!camOn){camMsg.style.color='#64748b';camMsg.textContent=camS===1?'Camera off':'Waiting for camera…';}
+  }
+  function poll(){
+    fetch('/hw').then(function(r){return r.json();}).then(function(d){
+      list.innerHTML=d.items.map(function(it){
+        return '<div style="display:flex;gap:8px;align-items:baseline">'+
+          '<span style="color:'+COL[it.s]+';font-size:14px">&#9679;</span>'+
+          '<span style="min-width:96px;color:#e2e8f0;font-weight:700">'+esc(it.n)+'</span>'+
+          '<span style="color:'+(it.s===2?'#f87171':'#94a3b8')+'">'+esc(it.i||LBL[it.s])+'</span></div>';
+      }).join('');
+      stepEl.textContent=d.ready?'':('starting: '+d.step);
+      d.items.forEach(function(it){if(it.k==='cam')camS=it.s;});
+      camUI();
+      setTimeout(poll,d.ready?10000:1000);
+    }).catch(function(){
+      stepEl.textContent='robot not answering';stepEl.style.color='#ef4444';
+      setTimeout(poll,3000);
+    });
+  }
+  bCam.addEventListener('click',function(){
+    camOn=!camOn;
+    if(camOn){
+      camImg.onerror=function(){camOn=false;camImg.style.display='none';camMsg.style.display='';
+        camMsg.style.color='#ef4444';camMsg.textContent='Stream failed (port 81)';bCam.innerHTML='&#9654; Start camera';};
+      camImg.src='http://'+location.hostname+':81/stream';
+      camImg.style.display='';camMsg.style.display='none';
+      bCam.innerHTML='&#9632; Stop camera';
+    }else{
+      camImg.onerror=null;camImg.removeAttribute('src');camImg.style.display='none';camMsg.style.display='';
+      bCam.innerHTML='&#9654; Start camera';camUI();
+    }
+  });
+  document.getElementById('bSnap').addEventListener('click',function(){
+    window.open('/cam/snapshot?t='+Date.now(),'_blank');
+  });
+  poll();
+})();
+</script>
+</body>
+</html>

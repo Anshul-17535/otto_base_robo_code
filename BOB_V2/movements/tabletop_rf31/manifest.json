@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "neutral": [
+    90,
+    90,
+    90,
+    31
+  ],
+  "jointOrder": [
+    "LH",
+    "LF",
+    "RH",
+    "RF"
+  ],
+  "maximumOffsetDegrees": 1,
+  "physicalValidation": "not tested",
+  "purpose": "Future BOB_ROBO_CONVO idle and expression selection; integration deferred",
+  "files": [
+    "idle_hold.json",
+    "attentive.json",
+    "little_nod.json",
+    "curious.json",
+    "happy_wiggle.json",
+    "sleepy.json"
+  ],
+  "requirements": [
+    "Motion API v2 and captured custom idle",
+    "Calibrated fresh IMU",
+    "Supported observed trial before use",
+    "PID off; no forward walking"
+  ]
+}

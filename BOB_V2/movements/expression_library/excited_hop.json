@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "name": "Excited hop",
+  "mode": "joints",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 14
+    },
+    {
+      "angles": [
+        74,
+        74,
+        74,
+        74
+      ],
+      "moveMs": 120,
+      "holdMs": 29
+    },
+    {
+      "angles": [
+        119,
+        119,
+        119,
+        119
+      ],
+      "moveMs": 180,
+      "holdMs": 9
+    },
+    {
+      "angles": [
+        93,
+        93,
+        93,
+        93
+      ],
+      "moveMs": 120,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        106,
+        106,
+        106,
+        106
+      ],
+      "moveMs": 120,
+      "holdMs": 9
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 27
+    }
+  ]
+}

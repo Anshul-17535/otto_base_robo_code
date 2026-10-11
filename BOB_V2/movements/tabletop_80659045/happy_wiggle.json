@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "name": "Happy wiggle",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "moveMs": 1600,
+      "holdMs": 500
+    },
+    {
+      "angles": [
+        81,
+        66,
+        89,
+        44
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        79,
+        64,
+        91,
+        46
+      ],
+      "moveMs": 1600,
+      "holdMs": 350
+    },
+    {
+      "angles": [
+        80,
+        65,
+        90,
+        45
+      ],
+      "moveMs": 1600,
+      "holdMs": 700
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "name": "Happy wiggle",
+  "mode": "joints",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 63
+    },
+    {
+      "angles": [
+        126,
+        112,
+        54,
+        68
+      ],
+      "moveMs": 144,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        54,
+        68,
+        126,
+        112
+      ],
+      "moveMs": 288,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        126,
+        112,
+        54,
+        68
+      ],
+      "moveMs": 288,
+      "holdMs": 36
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 144,
+      "holdMs": 90
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "pose": [
+    80,
+    65,
+    90,
+    45
+  ],
+  "channel": 3,
+  "delta": 1,
+  "samples": [],
+  "completed": false,
+  "returned": false,
+  "error": "<urlopen error [Errno 1] Operation not permitted>"
+}

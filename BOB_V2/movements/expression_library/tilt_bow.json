@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "name": "Bow (tilt)",
+  "mode": "tilt",
+  "expression": 5,
+  "frames": [
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 700,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        6.0,
+        0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 650,
+      "holdMs": 250
+    },
+    {
+      "tilt": [
+        0,
+        0
+      ],
+      "moveMs": 700,
+      "holdMs": 400
+    }
+  ]
+}

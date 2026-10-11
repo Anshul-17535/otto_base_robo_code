@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "name": "Kick",
+  "mode": "joints",
+  "expression": 2,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 18
+    },
+    {
+      "angles": [
+        100,
+        98,
+        80,
+        82
+      ],
+      "moveMs": 120,
+      "holdMs": 16
+    },
+    {
+      "angles": [
+        132,
+        142,
+        80,
+        82
+      ],
+      "moveMs": 176,
+      "holdMs": 40
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 208,
+      "holdMs": 22
+    },
+    {
+      "angles": [
+        80,
+        82,
+        100,
+        98
+      ],
+      "moveMs": 120,
+      "holdMs": 16
+    },
+    {
+      "angles": [
+        80,
+        82,
+        132,
+        142
+      ],
+      "moveMs": 176,
+      "holdMs": 40
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 208,
+      "holdMs": 27
+    }
+  ]
+}

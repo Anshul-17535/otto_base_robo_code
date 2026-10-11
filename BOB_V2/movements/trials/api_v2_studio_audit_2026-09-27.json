@@ -1,0 +1,7951 @@
+{
+  "pose": [
+    90,
+    90,
+    90,
+    39
+  ],
+  "samples": [
+    {
+      "recordedAt": 1790510167.097023,
+      "apiVersion": 2,
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "idle captured; PID gains zero; ready to arm",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 21,
+      "pitch": -0.14463043212890625,
+      "roll": 0,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510167.343822,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": false,
+      "reason": "armed; holding",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1013,
+      "calibrated": true,
+      "sampleAgeMs": 49,
+      "pitch": -0.1134185791015625,
+      "roll": -0.0174713134765625,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510167.701505,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.016080856323242188,
+      "roll": 0.0551910400390625,
+      "base": [
+        90,
+        90,
+        90,
+        39.025482177734375
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510168.00806,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1012,
+      "calibrated": true,
+      "sampleAgeMs": 37,
+      "pitch": -0.08965110778808594,
+      "roll": -0.0539093017578125,
+      "base": [
+        90,
+        90,
+        90,
+        39.5185203552246
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        40
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510168.34229,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 33,
+      "pitch": -0.2251567840576172,
+      "roll": 0.276641845703125,
+      "base": [
+        90,
+        90,
+        90,
+        40.3507308959961
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        40
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510168.653344,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 47,
+      "pitch": 0.2898426055908203,
+      "roll": -0.329681396484375,
+      "base": [
+        90,
+        90,
+        90,
+        40.9307518005371
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510169.034944,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 21,
+      "pitch": 0.5394458770751953,
+      "roll": -0.0935821533203125,
+      "base": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510169.32908,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 12,
+      "pitch": 0.2593193054199219,
+      "roll": 0.3265533447265625,
+      "base": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510169.833515,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 14,
+      "pitch": -0.09646987915039062,
+      "roll": 0,
+      "base": [
+        90,
+        90,
+        90,
+        40.75699996948242
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        41
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 1,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510170.18629,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 29,
+      "pitch": 0.08046531677246094,
+      "roll": -0.1101837158203125,
+      "base": [
+        90,
+        90,
+        90,
+        38.60237121582031
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 1,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510170.489401,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 38,
+      "pitch": -0.032161712646484375,
+      "roll": -0.055145263671875,
+      "base": [
+        90,
+        90,
+        90,
+        37.32462692260742
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 1,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510170.794382,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 44,
+      "pitch": 0.01665496826171875,
+      "roll": 0.0173797607421875,
+      "base": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 1,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510171.391797,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1012,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.0005950927734375,
+      "roll": -0.072723388671875,
+      "base": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 1,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510171.721508,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 27,
+      "pitch": -0.056598663330078125,
+      "roll": -0.091461181640625,
+      "base": [
+        90,
+        90,
+        90,
+        37.244384765625
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        37
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510172.003484,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 8,
+      "pitch": -0.00833702087402344,
+      "roll": -0.091461181640625,
+      "base": [
+        90,
+        90,
+        90,
+        37.955013275146484
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        38
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510172.381099,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 39,
+      "pitch": 0,
+      "roll": 0,
+      "base": [
+        90,
+        90,
+        90,
+        38.7365608215332
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510172.703626,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 20,
+      "pitch": 0.05669403076171875,
+      "roll": 0.091400146484375,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510173.009513,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 0.016084671020507812,
+      "roll": -0.055145263671875,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510173.31116,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 27,
+      "pitch": 0.1370830535888672,
+      "roll": -0.018829345703125,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 2,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510173.777644,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 0.00839042663574219,
+      "roll": 0.091400146484375,
+      "base": [
+        90,
+        90.39068603515625,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 3,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510174.112025,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 7,
+      "pitch": 0.00839042663574219,
+      "roll": 0.091400146484375,
+      "base": [
+        90,
+        91.3436508178711,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        91,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 3,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510174.563704,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 45,
+      "pitch": 0.06485748291015625,
+      "roll": 0.0173797607421875,
+      "base": [
+        90,
+        91.94927978515625,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 3,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510174.90326,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 29,
+      "pitch": -0.12012863159179688,
+      "roll": 0.0362396240234375,
+      "base": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 3,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510175.1903648,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 28,
+      "pitch": 0.04884529113769531,
+      "roll": 0.0724334716796875,
+      "base": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 3,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510175.513278,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 34,
+      "pitch": 0.10519027709960938,
+      "roll": -0.0014495849609375,
+      "base": [
+        90,
+        91.5078125,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        92,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510175.810066,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 34,
+      "pitch": 0,
+      "roll": 0,
+      "base": [
+        90,
+        90.1847686767578,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510176.099912,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 37,
+      "pitch": 0,
+      "roll": 0,
+      "base": [
+        90,
+        88.7692184448242,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        89,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510176.451753,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 17,
+      "pitch": -1.263936996459961,
+      "roll": -0.0514373779296875,
+      "base": [
+        90,
+        88.0013961791992,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510176.7985961,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1013,
+      "calibrated": true,
+      "sampleAgeMs": 31,
+      "pitch": -0.4920501708984375,
+      "roll": 0.16790771484375,
+      "base": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510177.139155,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 24,
+      "pitch": -0.1918811798095703,
+      "roll": 0.238006591796875,
+      "base": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 4,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510177.452579,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1020,
+      "calibrated": true,
+      "sampleAgeMs": 38,
+      "pitch": -0.5378246307373047,
+      "roll": 1.007720947265625,
+      "base": [
+        90,
+        88.3125,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        88,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 5,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510177.8290172,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.23993682861328125,
+      "roll": 0.238006591796875,
+      "base": [
+        90,
+        89,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        89,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 5,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510178.18721,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1012,
+      "calibrated": true,
+      "sampleAgeMs": 6,
+      "pitch": -0.2108898162841797,
+      "roll": -0.0904083251953125,
+      "base": [
+        90,
+        89.8600845336914,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 5,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510178.508167,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 30,
+      "pitch": 0.07323455810546875,
+      "roll": 0.108551025390625,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 5,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510178.817816,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1013,
+      "calibrated": true,
+      "sampleAgeMs": 29,
+      "pitch": -0.03215599060058594,
+      "roll": 0.110443115234375,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 5,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510179.171777,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 38,
+      "pitch": -0.14549636840820312,
+      "roll": -0.072723388671875,
+      "base": [
+        90.02548217773438,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510179.566182,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 34,
+      "pitch": -0.01604461669921875,
+      "roll": -0.1101837158203125,
+      "base": [
+        90.5703353881836,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        91,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510179.8904378,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 24,
+      "pitch": 0.03269195556640625,
+      "roll": -0.037628173828125,
+      "base": [
+        91.4881362915039,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        91,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510180.258771,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 33,
+      "pitch": 0.3783912658691406,
+      "roll": -0.3479156494140625,
+      "base": [
+        91.97926330566406,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510180.617567,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 34,
+      "pitch": 0.08087921142578125,
+      "roll": -0.037628173828125,
+      "base": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510180.911216,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1013,
+      "calibrated": true,
+      "sampleAgeMs": 36,
+      "pitch": -0.05669212341308594,
+      "roll": 0.0741729736328125,
+      "base": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 6,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510181.217887,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 30,
+      "pitch": -0.0238037109375,
+      "roll": 0.0362396240234375,
+      "base": [
+        91.64596557617188,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        92,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510181.610059,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 32,
+      "pitch": 0.0816650390625,
+      "roll": 0.1996612548828125,
+      "base": [
+        90.36812591552734,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510181.8945248,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 6,
+      "pitch": 0.000629425048828125,
+      "roll": 0.0724334716796875,
+      "base": [
+        88.67830657958984,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        89,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510182.2427468,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.015390396118164062,
+      "roll": 0.1275482177734375,
+      "base": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510182.5530891,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 40,
+      "pitch": 0.0971088409423828,
+      "roll": 0.0724334716796875,
+      "base": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510182.858203,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 26,
+      "pitch": 0.016084671020507812,
+      "roll": -0.055145263671875,
+      "base": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 7,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510183.19382,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 47,
+      "pitch": 0.01665496826171875,
+      "roll": 0.0173797607421875,
+      "base": [
+        88.27584838867188,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        88,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 8,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510183.517714,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 50,
+      "pitch": 0.03998374938964844,
+      "roll": -0.091461181640625,
+      "base": [
+        88.9600067138672,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        89,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 8,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510183.808254,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 37,
+      "pitch": 0.16914749145507812,
+      "roll": -0.128814697265625,
+      "base": [
+        89.65503692626953,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 8,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510184.417084,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1019,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 0.21027565002441406,
+      "roll": 0.1615142822265625,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 8,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510184.805865,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 50,
+      "pitch": 0.0971088409423828,
+      "roll": 0.0724334716796875,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 8,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510185.141078,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1013,
+      "calibrated": true,
+      "sampleAgeMs": 49,
+      "pitch": -0.0972442626953125,
+      "roll": -0.072723388671875,
+      "base": [
+        90,
+        90,
+        90.02548217773438,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510185.5239239,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.0404510498046875,
+      "roll": -0.14654541015625,
+      "base": [
+        90,
+        90,
+        90.5296630859375,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        91,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510185.8531241,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 19,
+      "pitch": -0.048259735107421875,
+      "roll": 0,
+      "base": [
+        90,
+        90,
+        91.49256134033203,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        91,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510186.145082,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1018,
+      "calibrated": true,
+      "sampleAgeMs": 25,
+      "pitch": 0.00975990295410156,
+      "roll": 0.235595703125,
+      "base": [
+        90,
+        90,
+        91.96582794189453,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510186.4745522,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1010,
+      "calibrated": true,
+      "sampleAgeMs": 40,
+      "pitch": -0.0658130645751953,
+      "roll": -0.0904083251953125,
+      "base": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510186.75007,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 31,
+      "pitch": 0.024435043334960938,
+      "roll": 0.0362396240234375,
+      "base": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 9,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510187.060647,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 8,
+      "pitch": -0.06435394287109375,
+      "roll": 0.0551910400390625,
+      "base": [
+        90,
+        90,
+        91.94903564453125,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        92,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510187.498523,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 6,
+      "pitch": -0.031497955322265625,
+      "roll": 0.0173797607421875,
+      "base": [
+        90,
+        90,
+        90.86844635009766,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        91,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510187.775655,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1018,
+      "calibrated": true,
+      "sampleAgeMs": 50,
+      "pitch": -0.06274986267089844,
+      "roll": 0.1996612548828125,
+      "base": [
+        90,
+        90,
+        88.91915130615234,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        89,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510188.12023,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 14,
+      "pitch": 0.36236000061035156,
+      "roll": -0.293243408203125,
+      "base": [
+        90,
+        90,
+        88.02105712890625,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510188.3984342,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 21,
+      "pitch": 0.00905609130859375,
+      "roll": 0.16363525390625,
+      "base": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510188.7095392,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1011,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.10583686828613281,
+      "roll": 0.0014495849609375,
+      "base": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 10,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510189.065939,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1018,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": -0.00710296630859375,
+      "roll": 0.0535125732421875,
+      "base": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510189.4415748,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": true,
+      "sampleAgeMs": 34,
+      "pitch": -0.016080856323242188,
+      "roll": 0.0551910400390625,
+      "base": [
+        90,
+        90,
+        88.2903060913086,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        88,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510189.7820532,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 24,
+      "pitch": -0.16822052001953125,
+      "roll": 0.0362396240234375,
+      "base": [
+        90,
+        90,
+        89.21842193603516,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        89,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510190.125525,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 4,
+      "pitch": 0.024435043334960938,
+      "roll": 0.0362396240234375,
+      "base": [
+        90,
+        90,
+        89.86278533935547,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510190.450929,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1016,
+      "calibrated": true,
+      "sampleAgeMs": 31,
+      "pitch": -0.0803546905517578,
+      "roll": -0.055145263671875,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510190.743197,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": true,
+      "reason": "playing",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1017,
+      "calibrated": true,
+      "sampleAgeMs": 26,
+      "pitch": 0.04102897644042969,
+      "roll": 0.0535125732421875,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 11,
+      "remaining": 1,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510191.041515,
+      "apiVersion": 2,
+      "armed": true,
+      "pid": false,
+      "playing": false,
+      "reason": "finished; holding",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1015,
+      "calibrated": true,
+      "sampleAgeMs": 16,
+      "pitch": -0.032161712646484375,
+      "roll": -0.055145263671875,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    },
+    {
+      "recordedAt": 1790510191.867727,
+      "apiVersion": 2,
+      "armed": false,
+      "pid": false,
+      "playing": false,
+      "reason": "stopped by operator",
+      "imuReady": true,
+      "imuSampleValid": true,
+      "accelMagnitude": 1014,
+      "calibrated": false,
+      "sampleAgeMs": 17,
+      "pitch": -0.266448974609375,
+      "roll": -0.10919189453125,
+      "base": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "commanded": [
+        90,
+        90,
+        90,
+        39
+      ],
+      "correction": [
+        0,
+        0
+      ],
+      "target": [
+        0,
+        0
+      ],
+      "frame": 0,
+      "remaining": 0,
+      "limited": false,
+      "limitedFrames": 0,
+      "rmsTilt": 0,
+      "peakTilt": 0,
+      "leaseMs": 3000,
+      "config": {
+        "gains": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "joints": [
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            87,
+            93,
+            0,
+            1
+          ],
+          [
+            87,
+            93,
+            1,
+            0
+          ],
+          [
+            36,
+            42,
+            0,
+            -1
+          ]
+        ],
+        "neutral": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "customNeutral": true,
+        "servoPins": [
+          38,
+          40,
+          39,
+          41
+        ],
+        "servoTrims": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "correction": 1,
+        "slew": 5,
+        "cutoff": 10
+      }
+    }
+  ],
+  "checks": [
+    "arm holds custom idle; PID off",
+    "/motion/heartbeat rejected as expected",
+    "/motion/play rejected as expected",
+    "/servopos?ch=0&deg=90 rejected as expected",
+    "12-frame four-joint trial completed and returned to idle",
+    "six NVS slots saved and read back exactly",
+    "stop releases ownership and holds idle"
+  ],
+  "completed": true,
+  "physicalMovementVerified": false,
+  "saved": [
+    {
+      "slot": 0,
+      "key": "idle_hold",
+      "sequence": {
+        "version": 1,
+        "name": "Idle hold",
+        "expression": 6,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    },
+    {
+      "slot": 1,
+      "key": "attentive",
+      "sequence": {
+        "version": 1,
+        "name": "Attentive",
+        "expression": 6,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              91,
+              90,
+              91,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    },
+    {
+      "slot": 2,
+      "key": "little_nod",
+      "sequence": {
+        "version": 1,
+        "name": "Little nod",
+        "expression": 0,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              91,
+              90,
+              91,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              89,
+              90,
+              89,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    },
+    {
+      "slot": 3,
+      "key": "curious",
+      "sequence": {
+        "version": 1,
+        "name": "Curious",
+        "expression": 3,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              90,
+              91,
+              90,
+              38
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              89,
+              90,
+              40
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    },
+    {
+      "slot": 4,
+      "key": "happy_wiggle",
+      "sequence": {
+        "version": 1,
+        "name": "Happy wiggle",
+        "expression": 0,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              91,
+              91,
+              89,
+              38
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              89,
+              89,
+              91,
+              40
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    },
+    {
+      "slot": 5,
+      "key": "sleepy",
+      "sequence": {
+        "version": 1,
+        "name": "Sleepy rock",
+        "expression": 4,
+        "frames": [
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 500
+          },
+          {
+            "angles": [
+              90,
+              91,
+              90,
+              38
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 350
+          },
+          {
+            "angles": [
+              90,
+              90,
+              90,
+              39
+            ],
+            "moveMs": 1600,
+            "holdMs": 700
+          }
+        ]
+      }
+    }
+  ],
+  "libraryBefore": {
+    "slots": [
+      {
+        "slot": 0,
+        "sequence": null
+      },
+      {
+        "slot": 1,
+        "sequence": null
+      },
+      {
+        "slot": 2,
+        "sequence": null
+      },
+      {
+        "slot": 3,
+        "sequence": null
+      },
+      {
+        "slot": 4,
+        "sequence": null
+      },
+      {
+        "slot": 5,
+        "sequence": null
+      }
+    ]
+  },
+  "sequence": {
+    "name": "Four joint small test",
+    "expression": 6,
+    "frames": [
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          41
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          37
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          92,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          88,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          92,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          88,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          92,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          88,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      },
+      {
+        "angles": [
+          90,
+          90,
+          90,
+          39
+        ],
+        "moveMs": 1200,
+        "holdMs": 700
+      }
+    ]
+  }
+}

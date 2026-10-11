@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "name": "Foot dance",
+  "mode": "joints",
+  "expression": 0,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 14
+    },
+    {
+      "angles": [
+        96,
+        113,
+        96,
+        113
+      ],
+      "moveMs": 120,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        90,
+        139,
+        90,
+        44
+      ],
+      "moveMs": 276,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        90,
+        44,
+        90,
+        139
+      ],
+      "moveMs": 380,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        90,
+        139,
+        90,
+        44
+      ],
+      "moveMs": 380,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        90,
+        44,
+        90,
+        139
+      ],
+      "moveMs": 380,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        94,
+        137,
+        94,
+        137
+      ],
+      "moveMs": 372,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        86,
+        46,
+        86,
+        46
+      ],
+      "moveMs": 364,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        94,
+        137,
+        94,
+        137
+      ],
+      "moveMs": 364,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        86,
+        46,
+        86,
+        46
+      ],
+      "moveMs": 364,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        124,
+        129,
+        56,
+        59
+      ],
+      "moveMs": 332,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        56,
+        59,
+        124,
+        129
+      ],
+      "moveMs": 280,
+      "holdMs": 13
+    },
+    {
+      "angles": [
+        98,
+        142,
+        98,
+        142
+      ],
+      "moveMs": 332,
+      "holdMs": 22
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 208,
+      "holdMs": 36
+    }
+  ]
+}

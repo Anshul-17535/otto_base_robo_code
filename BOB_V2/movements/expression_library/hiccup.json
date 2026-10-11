@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "name": "Hiccup",
+  "mode": "joints",
+  "expression": 3,
+  "frames": [
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 54
+    },
+    {
+      "angles": [
+        108,
+        119,
+        108,
+        119
+      ],
+      "moveMs": 120,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 120,
+      "holdMs": 72
+    },
+    {
+      "angles": [
+        111,
+        121,
+        111,
+        121
+      ],
+      "moveMs": 124,
+      "holdMs": 11
+    },
+    {
+      "angles": [
+        90,
+        90,
+        90,
+        90
+      ],
+      "moveMs": 124,
+      "holdMs": 45
+    }
+  ]
+}
