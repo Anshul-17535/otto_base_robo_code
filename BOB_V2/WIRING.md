@@ -99,6 +99,7 @@ After wiring, open the dashboard **Audio Diagnostics** card → **Mic Meter: ON*
 | DIN | **GPIO14** | Speaker data |
 | VIN | **5 V** | Amp power (not ESP32 3.3 V) |
 | GND | **GND** | Shared ground |
+| **GAIN** | **GND** | **Critical — must be wired. Floating = +15 dB internal gain → amp clips on every signal. GND = +3 dB (clean). For more volume: 100kΩ to VIN = +6 dB, 10kΩ to VIN = +9 dB, VIN direct = +12 dB.** |
 | SPK+ / SPK− | Speaker terminals | Connect speaker only to amp outputs |
 
 Test with **Speaker Test Tone** in Audio Diagnostics after flashing.

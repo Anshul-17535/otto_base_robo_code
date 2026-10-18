@@ -5177,6 +5177,67 @@ void handleHw() {
 #include "motion_api.h"
 #include "servo_mapping_api.h"
 
+// Rebase all occupied NVS slots from oldNeutral to newNeutral.
+// Each absolute angle is shifted by (newNeutral[ch] - oldNeutral[ch]).
+// Frames whose rebased angles would fall outside the new joint limits are
+// clamped; the slot is skipped (not deleted) if the sequence fails validation.
+// Called automatically by handleSavePose after the new neutral is adopted.
+static void rebaseAllSlots(const float oldNeutral[4], const bobmotion::Config& newCfg) {
+  const float* newNeutral = newCfg.neutral;
+  float delta[4];
+  bool anyDelta = false;
+  for (unsigned ch = 0; ch < 4; ++ch) {
+    delta[ch] = newNeutral[ch] - oldNeutral[ch];
+    if (fabsf(delta[ch]) > 0.5f) anyDelta = true;
+  }
+  if (!anyDelta) return;   // neutral unchanged — nothing to do
+
+  for (unsigned slot = 0; slot < bobmotion::SLOTS; ++slot) {
+    char key[12]; motionSlotKey(slot, key, sizeof(key));
+    cJSON* j = motionLoad(key);
+    if (!j) continue;   // empty slot
+
+    cJSON* framesJ = cJSON_GetObjectItemCaseSensitive(j, "frames");
+    if (!cJSON_IsArray(framesJ)) { cJSON_Delete(j); continue; }
+
+    // Skip tilt sequences — they store orientation targets, not joint angles
+    cJSON* modeJ = cJSON_GetObjectItemCaseSensitive(j, "mode");
+    if (cJSON_IsString(modeJ) && strcmp(modeJ->valuestring, "joints") != 0) {
+      cJSON_Delete(j); continue;
+    }
+
+    bool changed = false;
+    int sz = cJSON_GetArraySize(framesJ);
+    for (int fi = 0; fi < sz; ++fi) {
+      cJSON* f = cJSON_GetArrayItem(framesJ, fi);
+      cJSON* anglesJ = cJSON_GetObjectItemCaseSensitive(f, "angles");
+      if (!cJSON_IsArray(anglesJ) || cJSON_GetArraySize(anglesJ) != 4) continue;
+      for (int ch = 0; ch < 4; ++ch) {
+        cJSON* v = cJSON_GetArrayItem(anglesJ, ch);
+        if (!cJSON_IsNumber(v)) continue;
+        float newVal = bobmotion::bound((float)v->valuedouble + delta[ch], 0.0f, 180.0f);
+        v->valuedouble = newVal;
+        changed = true;
+      }
+    }
+
+    if (changed) {
+      // Re-parse through motionParseSequence to validate against new limits
+      bobmotion::Sequence seq;
+      bool valid = motionParseSequence(j, seq);
+      if (valid) {
+        // Store the rebased sequence back to NVS
+        cJSON* stored = motionSequenceJson(seq);
+        motionStore(key, stored);   // motionStore deletes stored
+        dlogPrintf("savepose: rebased slot %u to new neutral", slot);
+      } else {
+        dlogPrintf("savepose: slot %u skipped — rebased angles outside new limits", slot);
+      }
+    }
+    cJSON_Delete(j);
+  }
+}
+
 // GET /savepose[?radius=N][?nocal=1] — "Save Calibrated Position".
 // Captures the CURRENT commanded servo pose as the calibrated home/idle pose and
 // (unless nocal=1) calibrates the IMU at that pose, persisting BOTH to NVS in one
@@ -5188,6 +5249,8 @@ void handleHw() {
 // radius (default 30, 1..45) is the per-joint travel window Motion Studio
 // SEQUENCES may use around the pose; legacy gaits/dances are not bounded by it.
 // The window is clamped so command+trim always stays within 0..180.
+// After the new neutral is committed, all occupied NVS joint-mode slots are
+// automatically rebased to the new neutral so saved moves stay correct.
 void handleSavePose() {
   if (motion.armed) { server.send(409,"text/plain","stop Motion Studio before saving a pose"); return; }
   for (unsigned i=0;i<4;++i)
@@ -5219,10 +5282,18 @@ void handleSavePose() {
   if (!bobmotion::validConfig(candidate)) { server.send(400,"text/plain","captured pose failed validation"); return; }
 
   // Persist the profile first (never writes a PWM command), then adopt it.
+  // Snapshot the old neutral before overwriting so rebaseAllSlots can compute deltas.
+  float oldNeutral[4];
+  for (unsigned i=0;i<4;++i) oldNeutral[i] = motion.config.customNeutral ? motion.config.neutral[i] : 90.0f;
+
   if (!motionStore("config", motionConfigJson(candidate))) {
     server.send(507,"text/plain","idle pose could not be saved to NVS"); return;
   }
   motion.configure(candidate);
+
+  // Auto-rebase all occupied NVS joint-mode slots to the new neutral so every
+  // saved move stays correct without any manual intervention.
+  rebaseAllSlots(oldNeutral, candidate);
 
   int  collected = 0;
   bool cal = false;
